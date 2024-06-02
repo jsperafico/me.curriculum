@@ -125,7 +125,7 @@ body {
 #business-card .back aside ul li::before {
     font-family: 'FontAwesome';
     margin: 0px;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 #business-card .back aside ul li:nth-child(1)::before {
@@ -270,3 +270,4 @@ h2 {
     margin-top: 0px;
     text-align: center;
 }
+
