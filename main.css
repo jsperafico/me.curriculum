@@ -1,0 +1,272 @@
+:root {
+    --color-first: #bfeaee;
+    --color-second: #648285;
+    --color-third: #194961;
+    --business-size-multiplier: 2;
+    --card-radius: 20px;
+}
+
+html {
+    background-color: var(--color-first);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#business-card {
+    width: calc(90mm * var(--business-size-multiplier));
+    height: calc(50mm * var(--business-size-multiplier));
+    perspective: 1000px;
+
+    position: fixed;
+    inset: 0px;
+    margin: auto;
+}
+
+#business-card .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#business-card:hover .inner {    
+    transform: rotateY(180deg);
+}
+
+#business-card .front,
+#business-card .back {
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--card-radius) * var(--business-size-multiplier));
+    background: var(--color-first);
+    box-shadow:  20px 20px 60px #a2c7ca,
+                -20px -20px 60px #dcffff;
+
+    display: grid;
+    gap: 10px;
+    
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#business-card .front {
+    grid-template-columns: 1fr 2fr;
+}
+
+#business-card .front h1 {
+    grid-row: 1;
+}
+
+#business-card .front h2 {
+    grid-row: 2;
+}
+
+#business-card .front aside {
+    grid-row: 1 / span 2;
+    background-color: var(--color-third);
+    align-content: center;
+    border-radius:  calc(var(--card-radius) * var(--business-size-multiplier))
+                    0px 0px
+                    calc(var(--card-radius) * var(--business-size-multiplier));
+    padding: 20px;
+    
+    background: linear-gradient(145deg, #174257, #1b4e68);
+    box-shadow: 10px 0px 30px #1d5470;
+}
+
+#business-card .front aside img {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 240px;
+    height: 265px;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#business-card .back {
+    transform: rotateY(180deg);
+    grid-template-columns: 1fr 41%;
+}
+
+#business-card .back aside {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: var(--color-third);
+    align-content: center;
+    border-radius:  0px
+                    calc(var(--card-radius) * var(--business-size-multiplier))
+                    calc(var(--card-radius) * var(--business-size-multiplier))
+                    0px;
+    padding: 20px;
+    
+    background: linear-gradient(145deg, #174257, #1b4e68);
+    box-shadow: -10px 0px 30px #1d5470;
+}
+
+#business-card .back aside,
+#business-card .back aside ul {
+    margin: 0px;
+    padding: 5px;
+}
+
+#business-card .back aside ul {
+    list-style:none; 
+}
+
+#business-card .back aside ul li {
+    margin-bottom: 10px;
+}
+
+#business-card .back aside ul li::before {
+    font-family: 'FontAwesome';
+    margin: 0px;
+    padding-right: 10px;
+}
+
+#business-card .back aside ul li:nth-child(1)::before {
+    content: '\f0ac';
+}
+
+#business-card .back aside ul li:nth-child(2)::before {
+    content: '\f0e1';
+}
+
+#business-card .back aside ul li:nth-child(3)::before {
+    content: '\f09b';
+}
+
+#business-card .back aside ul li:nth-child(4)::before {
+    content: '\f0e0';
+}
+
+.skills {
+    list-style:none;
+    align-content: center;
+    text-align: right;
+    margin-right: 40px;
+}
+
+.skills li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.skills li:hover {
+    background-color: var(--color-third);
+    color: var(--color-first);
+    transition: all 0.3s ease-in-out;
+}
+
+.skills li::after {
+    font-family: 'FontAwesome';
+    margin: 0px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.skills li:nth-child(1)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f2d3  \f0c8';
+}
+
+.skills li:nth-child(2)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
+}
+
+.skills li:nth-child(3)::after {
+    content: '\f2d3  \f2d3  \f0c8  \f0c8  \f0c8';
+}
+
+.skills li:nth-child(4)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f2d3  \f2d3';
+}
+
+.skills li:nth-child(5)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f2d3  \f2d3';
+}
+
+.skills li:nth-child(6)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
+}
+
+.skills li:nth-child(7)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
+}
+
+.skills li:nth-child(8)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
+}
+
+.skills li:nth-child(9)::after {
+    content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
+}
+
+footer {
+    height: 50px;
+    background-color: var(--color-third);
+    box-shadow: -10px 0px 30px #1d5470;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: var(--color-first);
+    animation: pulse 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        color: var(--color-second);
+    }
+    30% {
+        color: var(--color-first);
+    }
+    70% {
+        color: var(--color-first);
+    }
+    100% {
+        color: var(--color-second);
+    }
+}
+
+footer p:after {
+	content: "";
+	animation: spin 6s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% { content: "[Mouse hover] or [Tap] to visualize the other side of the business card."; }
+    100% { content:"[Mouse click] or [Double Tap] to visualize my Curriculum."; }
+}
+
+h1, h2, p, a, li {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--color-second);
+}
+
+h1 {
+    font-size: 24pt;
+    font-style: italic;
+    font-weight: bold;
+    align-self: end;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 16pt;
+    font-style: italic;
+    font-weight: bold;
+    align-self: start;
+    margin-top: 0px;
+    text-align: center;
+}
