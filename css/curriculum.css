@@ -26,13 +26,12 @@ h3.about::before {
     font-family: 'FontAwesome';
     margin: 0px;
     padding-right: var(--size-small);
-    padding-left: var(--size-regular);
+    padding-left: var(--size-small);
     content: '\f05a';
 }
 
 main {
-	margin: 0 auto;
-	padding-top: 5%;
+	margin: 10% 0px 0px 0px;
 	height: 700px;
 	width: 100%;
 	box-sizing: border-box;
@@ -44,14 +43,13 @@ main .inner {
     height: 80%;
 	perspective: 1000px;
 	position: relative;
-	padding-top: 20%;
 }
 
 main .inner .carrousel {
 	width: 100%;
 	position: absolute;
 	float: right;
-	animation: rotar 20s infinite linear;
+	/* animation: rotar 20s infinite linear; */
 	transform-style: preserve-3d;
 }
 
@@ -73,24 +71,58 @@ main .inner .carrousel article {
 
     filter: drop-shadow(var(--size-small) var(--size-small) var(--size-large) #a2c7ca)
             drop-shadow(calc(-1 * var(--size-small)) calc(-1 * var(--size-small)) var(--size-large) #dcffff);
-
-    transition: all 300ms;
 }
 
 main .inner .carrousel article:nth-child(1) {
-	transform: rotateY(0deg) translateZ(300px); 
+	transform: rotateY(0deg) translateZ(200px); 
 } main .inner .carrousel article:nth-child(2) {
-	transform: rotateY(90deg) translateZ(300px); 
+	transform: rotateY(90deg) translateZ(200px); 
 } main .inner .carrousel article:nth-child(3) {
-	transform: rotateY(180deg) translateZ(300px); 
+	transform: rotateY(180deg) translateZ(200px); 
 } main .inner .carrousel article:nth-child(4) {
-	transform: rotateY(270deg) translateZ(300px); 
+	transform: rotateY(270deg) translateZ(200px); 
 }
 
 @keyframes rotar {
 	from {
-		transform: rotateY(0deg);
-	} to {
 		transform: rotateY(360deg);
+	} to {
+		transform: rotateY(0deg);
 	}
+}
+
+main .inner .carrousel article div.content {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 5px;
+}
+
+article h1,
+article h2 {
+    grid-column: 1 / span 2;
+    margin: 0px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+article h3 {
+    grid-column: 2;
+    font-size: 12px;
+    margin: auto;
+    padding-top: 15px;
+}
+
+article section {
+    grid-column: 1 / span 3;
+    margin: 0px 10px;
+    text-align: justify;
+    border: 1px solid red;
+
+}
+
+article section p {
+    font-size: 12px;
+    margin: 0px;
+    padding: 10px;
 }

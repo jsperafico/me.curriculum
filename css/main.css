@@ -11,7 +11,7 @@
     --size-large: 40px;
     --size-huge: 60px;
     --img-width: 240px;
-    --img-height: 265px;
+    --img-height: 240px;
 }
 
 html {
@@ -129,7 +129,6 @@ footer p:after {
 }
 
 h1, h2, h3, h4, h5, p, a, li {
-    font-size: 16px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: var(--color-second);
 }
