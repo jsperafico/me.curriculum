@@ -1,0 +1,96 @@
+:root {
+    --curriculum-size-multiplier: 0.5;
+    --curriculum-width: 210mm;
+    --curriculum-height: 297mm;
+}
+
+h1::before {
+    content: "Jonathan Pinto Sperafico";
+    font-size: 18px;
+}
+
+h2::before {
+    content: "Sr. Test Automation Engineer";
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14pt;
+    align-self: start;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h3.about::after,
+h3.about::before {
+    font-family: 'FontAwesome';
+    margin: 0px;
+    padding-right: var(--size-small);
+    padding-left: var(--size-regular);
+    content: '\f05a';
+}
+
+main {
+	margin: 0 auto;
+	padding-top: 5%;
+	height: 700px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+main .inner {
+	margin: auto;
+	width: 500px;
+    height: 80%;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 20%;
+}
+
+main .inner .carrousel {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 20s infinite linear;
+	transform-style: preserve-3d;
+}
+
+main .inner .carrousel:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+main .inner .carrousel article {
+    background-image: url(../img/cv.svg);
+    background-repeat: no-repeat;
+    clip-path: url(../img/cv.svg);
+
+    width: calc(var(--curriculum-width)  * var(--curriculum-size-multiplier));
+    height: calc(var(--curriculum-height) * var(--curriculum-size-multiplier));
+
+	overflow: hidden;
+	position: absolute;
+
+    filter: drop-shadow(var(--size-small) var(--size-small) var(--size-large) #a2c7ca)
+            drop-shadow(calc(-1 * var(--size-small)) calc(-1 * var(--size-small)) var(--size-large) #dcffff);
+
+    transition: all 300ms;
+}
+
+main .inner .carrousel article:nth-child(1) {
+	transform: rotateY(0deg) translateZ(300px); 
+} main .inner .carrousel article:nth-child(2) {
+	transform: rotateY(90deg) translateZ(300px); 
+} main .inner .carrousel article:nth-child(3) {
+	transform: rotateY(180deg) translateZ(300px); 
+} main .inner .carrousel article:nth-child(4) {
+	transform: rotateY(270deg) translateZ(300px); 
+}
+
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+	}
+}

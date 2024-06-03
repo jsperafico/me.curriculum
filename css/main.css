@@ -23,6 +23,12 @@ body {
     padding: 0px;
 }
 
+html,
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
 .skills {
     list-style: none;
     align-content: center;
@@ -77,7 +83,7 @@ body {
 }
 
 .skills li:nth-child(8)::after {
-    content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
+    content: '\f2d3  \f2d3  \f2d3  \f2d3  \f0c8';
 }
 
 .skills li:nth-child(9)::after {
@@ -122,7 +128,7 @@ footer p:after {
     animation-iteration-count: infinite;
 }
 
-h1, h2, p, a, li {
+h1, h2, h3, h4, h5, p, a, li {
     font-size: 16px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: var(--color-second);
