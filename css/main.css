@@ -96,8 +96,9 @@ footer {
     box-shadow: calc(-1 * var(--size-small)) 0px var(--size-regular) #1d5470;
     text-align: center;
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    right: 0;
     width: 100%;
 }
 

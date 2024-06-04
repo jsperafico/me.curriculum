@@ -1,101 +1,38 @@
 :root {
-    --curriculum-size-multiplier: 0.5;
+    --curriculum-size-multiplier: 1;
     --curriculum-width: 210mm;
     --curriculum-height: 297mm;
 }
 
-h1::before {
-    content: "Jonathan Pinto Sperafico";
-    font-size: 18px;
+html,
+body {
+	overflow-y: auto;
 }
 
-h2::before {
-    content: "Sr. Test Automation Engineer";
-    font-size: 16px;
+body {
+    text-align: -webkit-center;
 }
 
-h3 {
-    font-size: 14pt;
-    align-self: start;
-    margin-top: 0px;
-    text-align: center;
-}
-
-h3.about::after,
-h3.about::before {
-    font-family: 'FontAwesome';
-    margin: 0px;
-    padding-right: var(--size-small);
-    padding-left: var(--size-small);
-    content: '\f05a';
-}
-
-main {
-	margin: 10% 0px 0px 0px;
-	height: 700px;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-main .inner {
-	margin: auto;
-	width: 500px;
-    height: 80%;
-	perspective: 1000px;
-	position: relative;
-}
-
-main .inner .carrousel {
-	width: 100%;
-	position: absolute;
-	float: right;
-	/* animation: rotar 20s infinite linear; */
-	transform-style: preserve-3d;
-}
-
-main .inner .carrousel:hover {
-	animation-play-state: paused;
-	cursor: pointer;
-}
-
-main .inner .carrousel article {
+.background {
     background-image: url(../img/cv.svg);
     background-repeat: no-repeat;
     clip-path: url(../img/cv.svg);
+    filter: drop-shadow(var(--size-small) var(--size-small) var(--size-large) #a2c7ca)
+            drop-shadow(calc(-1 * var(--size-small)) calc(-1 * var(--size-small)) var(--size-large) #dcffff);
 
     width: calc(var(--curriculum-width)  * var(--curriculum-size-multiplier));
     height: calc(var(--curriculum-height) * var(--curriculum-size-multiplier));
 
-	overflow: hidden;
-	position: absolute;
+    display: block;
 
-    filter: drop-shadow(var(--size-small) var(--size-small) var(--size-large) #a2c7ca)
-            drop-shadow(calc(-1 * var(--size-small)) calc(-1 * var(--size-small)) var(--size-large) #dcffff);
+    margin-bottom: 50px;
+
 }
 
-main .inner .carrousel article:nth-child(1) {
-	transform: rotateY(0deg) translateZ(200px); 
-} main .inner .carrousel article:nth-child(2) {
-	transform: rotateY(90deg) translateZ(200px); 
-} main .inner .carrousel article:nth-child(3) {
-	transform: rotateY(180deg) translateZ(200px); 
-} main .inner .carrousel article:nth-child(4) {
-	transform: rotateY(270deg) translateZ(200px); 
-}
-
-@keyframes rotar {
-	from {
-		transform: rotateY(360deg);
-	} to {
-		transform: rotateY(0deg);
-	}
-}
-
-main .inner .carrousel article div.content {
-    margin: 40px;
+article {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 5px;
+    grid-template-rows: 1fr;
 }
 
 article h1,
@@ -115,14 +52,66 @@ article h3 {
 
 article section {
     grid-column: 1 / span 3;
-    margin: 0px 10px;
     text-align: justify;
-    border: 1px solid red;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
-article section p {
+article section div {
+    grid-row: 1;
+
+    clip-path: polygon(10px 0px, calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 0px calc(100% - 10px), 0px 10px);
+    background-color: var(--color-second);
+
+    display: block;
+
+    width: 97%;
+    height: 100%;
+
+    content: '';
+}
+
+article section div p {
+    grid-row: 1;
+
     font-size: 12px;
+
+    margin: 1px;
+    padding: 5px;
+
+    clip-path: polygon(10px 0px, calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 0px calc(100% - 10px), 0px 10px);
+
+    background-color: var(--color-first);
+    
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+
+    opacity: 50%;
+}
+
+
+h1::before {
+    font-size: 18px;
+}
+
+h2::before {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14pt;
+    align-self: start;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h3.about::after,
+h3.about::before {
+    font-family: 'FontAwesome';
     margin: 0px;
-    padding: 10px;
+    padding-right: var(--size-small);
+    padding-left: var(--size-small);
+    content: '\f05a';
 }
