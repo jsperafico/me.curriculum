@@ -29,64 +29,64 @@ body {
 	overflow-y: hidden;
 }
 
-.skills {
+ul.skills {
     list-style: none;
     align-content: center;
     text-align: right;
     margin-right: var(--size-large);
 }
 
-.skills li {
+ul.skills li {
     font-size: var(--size-regular);
     margin-bottom: var(--size-tiny);
 }
 
-.skills li:hover {
+ul.skills li:hover {
     background-color: var(--color-third);
     color: var(--color-first);
     transition: all 0.3s ease-in-out;
 }
 
-.skills li::after {
+ul.skills li::after {
     font-family: 'FontAwesome';
     margin: 0px;
     padding-right: var(--size-small);
     padding-left: var(--size-regular);
 }
 
-.skills li:nth-child(1)::after {
+ul.skills li:nth-child(1)::after {
     content: '\f2d3  \f2d3  \f2d3  \f2d3  \f0c8';
 }
 
-.skills li:nth-child(2)::after {
+ul.skills li:nth-child(2)::after {
     content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
 }
 
-.skills li:nth-child(3)::after {
+ul.skills li:nth-child(3)::after {
     content: '\f2d3  \f2d3  \f0c8  \f0c8  \f0c8';
 }
 
-.skills li:nth-child(4)::after {
+ul.skills li:nth-child(4)::after {
     content: '\f2d3  \f2d3  \f2d3  \f2d3  \f2d3';
 }
 
-.skills li:nth-child(5)::after {
+ul.skills li:nth-child(5)::after {
     content: '\f2d3  \f2d3  \f2d3  \f2d3  \f2d3';
 }
 
-.skills li:nth-child(6)::after {
+ul.skills li:nth-child(6)::after {
     content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
 }
 
-.skills li:nth-child(7)::after {
+ul.skills li:nth-child(7)::after {
     content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
 }
 
-.skills li:nth-child(8)::after {
+ul.skills li:nth-child(8)::after {
     content: '\f2d3  \f2d3  \f2d3  \f2d3  \f0c8';
 }
 
-.skills li:nth-child(9)::after {
+ul.skills li:nth-child(9)::after {
     content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
 }
 
@@ -129,7 +129,7 @@ footer p:after {
     animation-iteration-count: infinite;
 }
 
-h1, h2, h3, h4, h5, p, a, li {
+h1, h2, h3, h4, h5, h6, p, a, li {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: var(--color-second);
 }
@@ -163,7 +163,7 @@ h2 {
         --img-height: 125px;
     }
 
-    .skills {
+    ul.skills {
         list-style: none;
         align-content: center;
         margin-right: auto;
