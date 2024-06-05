@@ -2,11 +2,21 @@
     --curriculum-size-multiplier: 1;
     --curriculum-width: 210mm;
     --curriculum-height: 297mm;
+    --section-scale: 1.2;
 }
 
 html,
 body {
 	overflow-y: auto;
+}
+
+.background,
+article {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 .background {
@@ -19,21 +29,11 @@ body {
 
     width: calc(var(--curriculum-width)  * var(--curriculum-size-multiplier));
     height: calc(var(--curriculum-height) * var(--curriculum-size-multiplier));
-
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+ 
 }
 
 article {
-    position: absolute;
     top: var(--size-huge);
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
 
     width: calc(var(--curriculum-width) * var(--curriculum-size-multiplier) - 2 * var(--size-huge));
 
@@ -76,7 +76,7 @@ article section {
 }
 
 article section:hover {
-    transform: scale(1.2);
+    transform: scale(var(--section-scale));
     filter: drop-shadow(
         var(--size-tiny) 
         var(--size-tiny) 
@@ -394,6 +394,45 @@ ul.social li:nth-child(4) {
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
+    :root {
+        --size-tiny: 5px;
+        --size-small: 10px;
+        --size-regular: 20px;
+        --size-large: 40px;
+        --size-huge: 60px;
+        --section-scale: 1.15;
+    }
+
+    article {
+        margin-left: var(--size-huge);
+    }
+
+    footer {
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 20pt;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+
+    h3,
+    h4,
+    h4 a,
+    h5, 
+    h6,
+    p {
+        font-size: 14px;
+    }
+
+    ul.social {
+        margin-top: calc(var(--size-huge) - var(--size-tiny));
+        padding: var(--size-small);
+    }
+
     @keyframes spin {
         0% { content: "[Tap] to enhance the visualization of each section."; }
         100% { content:"[Double Tap] to visualize my Business Card."; }
@@ -403,6 +442,45 @@ ul.social li:nth-child(4) {
 
 @media only screen and (max-width: 734px) and (orientation: landscape) {
 
+    :root {
+        --size-tiny: 5px;
+        --size-small: 10px;
+        --size-regular: 20px;
+        --size-large: 40px;
+        --size-huge: 60px;
+        --section-scale: 1.15;
+    }
+
+    article {
+        margin-left: var(--size-huge);
+    }
+
+    footer {
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 20pt;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+
+    h3,
+    h4,
+    h4 a,
+    h5, 
+    h6,
+    p {
+        font-size: 14px;
+    }
+
+    ul.social {
+        margin-top: calc(var(--size-huge) - 2px);
+        padding: var(--size-small);
+    }
+    
     @keyframes spin {
         0% { content: "[Tap] to enhance the visualization of each section."; }
         100% { content:"[Double Tap] to visualize my Business Card."; }
