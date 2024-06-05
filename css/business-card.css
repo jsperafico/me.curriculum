@@ -109,6 +109,7 @@
 
 #business-card .back aside ul li {
     margin-bottom: var(--size-small);
+    cursor: pointer;
 }
 
 #business-card .back aside ul li::before {
