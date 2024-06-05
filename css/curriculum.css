@@ -70,6 +70,10 @@ article section {
     grid-template-rows: 1fr;
 }
 
+article section:hover {
+    transform: scale(1.2);
+}
+
 article section.gap {
     margin-top: var(--size-small);
 }
