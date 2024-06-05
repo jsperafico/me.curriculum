@@ -65,14 +65,22 @@ article section {
     grid-column: 1 / span 3;
     text-align: justify;
 
+    opacity: 100%;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+
+    transition: all 0.8s ease-in-out;
 }
 
 article section:hover {
     transform: scale(1.2);
-    transition: transform 0.8s;
+}
+
+article:hover section:not(:hover) {
+    opacity: 30%;
+    transition: all 0.8s;
 }
 
 article section.gap {
@@ -103,7 +111,7 @@ article section div {
         0px var(--size-small)
     );
     background-color: var(--color-second);
-    opacity: 80%;
+    opacity: 100%;
 
     grid-row: 1;
 
