@@ -94,6 +94,8 @@ article section div p {
     background-color: var(--color-first);
     opacity: 100%;
 
+    font-weight: bolder;
+
     grid-row: 1;
 
     margin: 1px;
@@ -207,7 +209,7 @@ ul.skills {
 }
 
 ul.skills li {
-    font-size: 11px;
+    font-size: 10px;
     margin-bottom: var(--size-tiny);
     margin-left: var(--size-small);
 }
@@ -251,4 +253,38 @@ h6 {
 
 p {
     font-size: 14px;
+}
+
+p.small {
+    font-size: 12px;
+}
+
+ul.social {
+    list-style: none; 
+}
+
+ul.social li {
+    margin-bottom: var(--size-small);
+}
+
+ul.social li::before {
+    font-family: 'FontAwesome';
+    margin: 0px;
+    padding-right: var(--size-small);
+}
+
+ul.social li:nth-child(1)::before {
+    content: '\f0ac';
+}
+
+ul.social li:nth-child(2)::before {
+    content: '\f0e1';
+}
+
+ul.social li:nth-child(3)::before {
+    content: '\f09b';
+}
+
+ul.social li:nth-child(4)::before {
+    content: '\f0e0';
 }
