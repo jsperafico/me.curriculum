@@ -91,47 +91,15 @@
                     calc(var(--size-regular) * var(--business-size-multiplier))
                     calc(var(--size-regular) * var(--business-size-multiplier))
                     0px;
-    padding: var(--size-regular);
+    padding: var(--size-small);
     
     background: linear-gradient(145deg, #174257, #1b4e68);
     box-shadow: calc(-1 * var(--size-small)) 0px var(--size-regular) #1d5470;
 }
 
 #business-card .back aside,
-#business-card .back aside ul {
+ul.social {
     margin: 0px;
-    padding: var(--size-tiny);
-}
-
-#business-card .back aside ul {
-    list-style: none; 
-}
-
-#business-card .back aside ul li {
-    margin-bottom: var(--size-small);
-    cursor: pointer;
-}
-
-#business-card .back aside ul li::before {
-    font-family: 'FontAwesome';
-    margin: 0px;
-    padding-right: var(--size-small);
-}
-
-#business-card .back aside ul li:nth-child(1)::before {
-    content: '\f0ac';
-}
-
-#business-card .back aside ul li:nth-child(2)::before {
-    content: '\f0e1';
-}
-
-#business-card .back aside ul li:nth-child(3)::before {
-    content: '\f09b';
-}
-
-#business-card .back aside ul li:nth-child(4)::before {
-    content: '\f0e0';
 }
 
 @keyframes spin {
@@ -196,16 +164,16 @@
         text-align: center;
     }
 
-    #business-card .back aside ul {
+    ul.social {
         display: inline-flex;
     }
 
-    #business-card .back aside ul li {
+    ul.social li {
         margin-left: var(--size-small);
         margin-right: var(--size-small);
     }
 
-    #business-card .back aside ul li::before {
+    ul.social li::before {
         padding: var(--size-small);
         border-radius: var(--size-small);
         background: #194961;
@@ -213,7 +181,7 @@
                     inset calc(-1 * var(--size-tiny)) calc(-1 * var(--size-tiny)) var(--size-small) #1d5470;
     }
 
-    #business-card .back aside ul li a {
+    ul.social li a {
         display: none;
     }
 
@@ -231,16 +199,16 @@
         --business-height: 50mm;
     }
 
-    #business-card .back aside ul {
+    ul.social {
         text-align: center;
     }
 
-    #business-card .back aside ul li {
+    ul.social li {
         font-size: 20px;
         margin: var(--size-regular);
     }
 
-    #business-card .back aside ul li::before {
+    ul.social li::before {
         padding: var(--size-small);
         border-radius: var(--size-small);
         background: #194961;
@@ -248,7 +216,7 @@
                     inset calc(-1 * var(--size-tiny)) calc(-1 * var(--size-tiny)) var(--size-small) #1d5470;
     }
 
-    #business-card .back aside ul li a {
+    ul.social li a {
         display: none;
     }
 

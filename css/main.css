@@ -90,6 +90,39 @@ ul.skills li:nth-child(9)::after {
     content: '\f2d3  \f2d3  \f2d3  \f0c8  \f0c8';
 }
 
+ul.social {
+    margin: 0px;
+    padding: var(--size-tiny);
+    list-style: none; 
+}
+
+ul.social li {
+    margin-bottom: var(--size-small);
+    cursor: pointer;
+}
+
+ul.social li::before {
+    font-family: 'FontAwesome';
+    margin: 0px;
+    padding-right: var(--size-small);
+}
+
+ul.social li:nth-child(1)::before {
+    content: '\f0ac';
+}
+
+ul.social li:nth-child(2)::before {
+    content: '\f0e1';
+}
+
+ul.social li:nth-child(3)::before {
+    content: '\f09b';
+}
+
+ul.social li:nth-child(4)::before {
+    content: '\f0e0';
+}
+
 footer {
     height: var(--size-large);
     background-color: var(--color-third);
