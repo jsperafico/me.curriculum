@@ -28,13 +28,13 @@ body {
 
 article {
     position: absolute;
-    top: 60px;
+    top: var(--size-huge);
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
 
-    width: calc(var(--curriculum-width) * var(--curriculum-size-multiplier) - 120px);
+    width: calc(var(--curriculum-width) * var(--curriculum-size-multiplier) - 2 * var(--size-huge));
 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -44,7 +44,7 @@ article {
 article p.citizenship {
     grid-row: 1;
     grid-column: 3;
-    margin: 5px;
+    margin: var(--size-tiny);
     align-content: end;
 }
 
@@ -55,9 +55,9 @@ article div.citizenship {
 }
 
 article div.citizenship img {
-    height: 20px;
+    height: var(--size-regular);
     box-shadow: inset;
-    margin-right: 5px;
+    margin-right: var(--size-tiny);
 }
 
 article section {
@@ -70,17 +70,25 @@ article section {
 }
 
 article section.gap {
-    margin-top: 10px;
+    margin-top: var(--size-small);
 }
 
 article section.double-gap {
-    margin-top: 20px;
+    margin-top: calc(var(--size-regular) + var(--size-tiny));
 }
 
 article section div {
-    clip-path: polygon(10px 0px, calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 0px calc(100% - 10px), 0px 10px);
+    clip-path: polygon(
+        var(--size-small) 0px,
+        calc(100% - var(--size-small)) 0px,
+        100% var(--size-small),
+        100% 100%,
+        var(--size-small) 100%,
+        0px calc(100% - var(--size-small)),
+        0px var(--size-small)
+    );
     background-color: var(--color-second);
-    opacity: 50%;
+    opacity: 80%;
 
     grid-row: 1;
 
@@ -90,41 +98,56 @@ article section div {
 }
 
 article section div p {
-    clip-path: polygon(10px 0px, calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 0px calc(100% - 10px), 0px 10px);
+    clip-path: polygon(
+        var(--size-small) 0px, 
+        calc(100% - var(--size-small)) 0px, 
+        100% var(--size-small), 
+        100% 100%, 
+        var(--size-small) 100%, 
+        0px calc(100% - var(--size-small)), 
+        0px var(--size-small)
+    );
     background-color: var(--color-first);
-    opacity: 100%;
 
     font-weight: bolder;
 
     grid-row: 1;
 
     margin: 1px;
-    padding: 5px;
+    padding: var(--size-tiny);
     
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
+    width: calc(100% - calc(var(--size-small) - 2));
+    height: calc(100% - calc(var(--size-small) - 2));
 }
 
 article section div.head {
     grid-row: 1;
     grid-column: 1;
-    clip-path: polygon(5px 0px, calc(100% - 5px) 0px, 100% 5px, 100% 100%, 5px 100%, 0px calc(100% - 5px), 0px 5px);
+    clip-path: polygon(
+        var(--size-tiny) 0px, 
+        calc(100% - var(--size-tiny)) 0px,
+        100% var(--size-tiny), 
+        100% 100%, 
+        var(--size-tiny) 100%, 
+        0px calc(100% - var(--size-tiny)), 
+        0px var(--size-tiny)
+    );
     background-color: var(--color-third);
     opacity: 100%;
     
-    height: 20px;
-    width: calc(100% - 50px);
+    height: var(--size-regular);
+    width: calc(100% - var(--size-huge));
     margin-left: auto;
     margin-right: auto;
-    margin-top: -12px;
+    margin-top: calc(-1 * var(--size-small) - var(--size-tiny));
     z-index: 1;
 
     display: flex;
-    column-gap: 20px;
+    column-gap: var(--size-regular);
 }
 
 article section div.head img {
-    margin-left: 20px;
+    margin-left: var(--size-regular);
     box-shadow: inset;
 }
 
@@ -135,7 +158,7 @@ article section div.head h6 {
 }
 
 article section div.head h4 {
-    width: 110px;
+    width: calc(var(--size-large) * 2 + var(--size-regular) + var(--size-small));
 }
 
 article section div.head h5
@@ -146,7 +169,7 @@ article section div.head h5
 
 article section div.head h6 {
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: var(--size-regular);
 }
 
 article section div:not(.head) {
@@ -195,7 +218,7 @@ article img.me {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
     position: absolute;
-    bottom: -4px;
+    bottom: calc(-1 * var(--size-tiny));
     left: calc(50% - 9.2mm);
     z-index: 5;
 }
@@ -219,7 +242,7 @@ h2 {
     grid-column: 1 / span 2;
     margin: 0px;
     text-align: left;
-    padding-left: 5px;
+    padding-left: var(--size-tiny);
 }
 
 h3 {
@@ -260,7 +283,7 @@ p.small {
 }
 
 ul.social {
-    margin-top: 60px;
+    margin-top: var(--size-large);
     padding: var(--size-tiny);
 
     grid-column: 1 / span 3;
@@ -321,7 +344,7 @@ ul.social li:nth-child(4)::after {
 ul.social li:nth-child(1),
 ul.social li:nth-child(3) {
     text-align: left;
-    margin-left: 40px;
+    margin-left: var(--size-large);
 }
 
 ul.social li:nth-child(2),
