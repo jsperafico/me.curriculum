@@ -530,6 +530,12 @@ ul.social li:nth-child(4) {
         z-index: 5;
     }
 
+    ul.skills li:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--color-second);
+        transition: none;
+    }
+
     footer {
         display: none;
     }
