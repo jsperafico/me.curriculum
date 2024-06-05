@@ -66,6 +66,7 @@ article section {
     text-align: justify;
 
     opacity: 100%;
+    filter: none;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -76,6 +77,12 @@ article section {
 
 article section:hover {
     transform: scale(1.2);
+    filter: drop-shadow(
+        var(--size-tiny) 
+        var(--size-tiny) 
+        var(--size-tiny) 
+        var(--color-third)
+    );
 }
 
 article:hover section:not(:hover) {
@@ -240,6 +247,10 @@ article h3.skills {
 article section.skills {
     grid-column: 3;
     display: block;
+}
+
+article section.skills:hover {
+    filter: none;
 }
 
 article h3.work::after,
