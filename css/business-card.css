@@ -226,3 +226,120 @@ ul.social {
     }
 
 }
+
+@media print {
+
+    :root {
+        --business-size-multiplier: 1;
+        --business-width: 90mm;
+        --business-height: 50mm;
+        --img-width: 25mm;
+        --img-height: 25mm;
+    }
+
+    body{
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    #business-card {
+        width: calc(var(--business-width)  * var(--business-size-multiplier) * 2);
+        height: calc(var(--business-height) * var(--business-size-multiplier));
+    }
+
+    #business-card,
+    #business-card .inner {
+        position: unset;
+
+        perspective: 0px;
+        margin: 0px;
+        padding: 0px;
+
+        transition: none;
+        transform-style: flat;
+    }
+
+    #business-card .inner {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #business-card .front,
+    #business-card .back {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        background: var(--color-first);
+        box-shadow: none;
+
+        position: unset;
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    #business-card .back {
+        right: 0px;
+        border-left: 1px dotted var(--color-third);
+    }
+
+    #business-card .front aside,
+    #business-card .back aside {
+        border-radius: 0px;
+        padding: var(--size-small);
+        
+        background-color: var(--color-third);
+        box-shadow: none;
+    }
+
+    #business-card .back aside {
+        padding: var(--size-tiny);
+    }
+
+    #business-card .back {
+        transform: none;
+    }
+    
+    ul.skills {
+        margin-right: var(--size-small);
+    }
+
+    ul.skills li,
+    ul.social li {
+        font-size: 9px;
+    }
+
+    ul.social {
+        padding: 0px;
+    }
+
+    ul.social li::before {
+        padding-right: var(--size-tiny);
+    }
+    
+    ul.social li::after {
+        padding-left: var(--size-tiny);
+    }
+
+    ul.social li:nth-child(4)::before {
+        content: none;
+        padding-right: calc(-1 * var(--size-tiny));
+    }
+
+    footer {
+        display: none;
+    }
+
+    h1 {
+        font-size: 14pt;
+        text-align: left;
+    }
+    
+    h2 {
+        font-size: 12pt;
+        text-align: left;
+    }
+}
