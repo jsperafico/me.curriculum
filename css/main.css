@@ -101,10 +101,18 @@ ul.social li {
     cursor: pointer;
 }
 
-ul.social li::before {
+ul.social li::before,
+ul.social li::after {
     font-family: 'FontAwesome';
     margin: 0px;
+}
+
+ul.social li::before {
     padding-right: var(--size-small);
+}
+
+ul.social li::after {
+    padding-left: var(--size-small);
 }
 
 ul.social li:nth-child(1)::before {

@@ -12,6 +12,7 @@ body {
 .background {
     background-image: url(../img/cv.svg);
     background-repeat: no-repeat;
+    -webkit-clip-path: url(../img/cv.svg);
     clip-path: url(../img/cv.svg);
     filter: drop-shadow(var(--size-small) var(--size-small) var(--size-large) #a2c7ca)
             drop-shadow(calc(-1 * var(--size-small)) calc(-1 * var(--size-small)) var(--size-large) #dcffff);
@@ -78,6 +79,15 @@ article section.double-gap {
 }
 
 article section div {
+    -webkit-clip-path: polygon(
+        var(--size-small) 0px,
+        calc(100% - var(--size-small)) 0px,
+        100% var(--size-small),
+        100% 100%,
+        var(--size-small) 100%,
+        0px calc(100% - var(--size-small)),
+        0px var(--size-small)
+    );
     clip-path: polygon(
         var(--size-small) 0px,
         calc(100% - var(--size-small)) 0px,
@@ -98,6 +108,15 @@ article section div {
 }
 
 article section div p {
+    -webkit-clip-path: polygon(
+        var(--size-small) 0px, 
+        calc(100% - var(--size-small)) 0px, 
+        100% var(--size-small), 
+        100% 100%, 
+        var(--size-small) 100%, 
+        0px calc(100% - var(--size-small)), 
+        0px var(--size-small)
+    );
     clip-path: polygon(
         var(--size-small) 0px, 
         calc(100% - var(--size-small)) 0px, 
@@ -123,6 +142,15 @@ article section div p {
 article section div.head {
     grid-row: 1;
     grid-column: 1;
+    -webkit-clip-path: polygon(
+        var(--size-tiny) 0px, 
+        calc(100% - var(--size-tiny)) 0px,
+        100% var(--size-tiny), 
+        100% 100%, 
+        var(--size-tiny) 100%, 
+        0px calc(100% - var(--size-tiny)), 
+        0px var(--size-tiny)
+    );
     clip-path: polygon(
         var(--size-tiny) 0px, 
         calc(100% - var(--size-tiny)) 0px,
@@ -218,8 +246,9 @@ article img.me {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
     position: absolute;
-    bottom: calc(-1 * var(--size-tiny));
-    left: calc(50% - 9.2mm);
+    bottom: calc(-1 * var(--size-regular));
+    left: 50%;
+    margin-left: -9mm;
     z-index: 5;
 }
 
@@ -294,49 +323,31 @@ ul.social {
     grid-template-rows: 1fr 1fr;
 }
 
-ul.social li {
-    margin-bottom: var(--size-small);
-    cursor: pointer
-}
-
-ul.social li::before,
-ul.social li::after {
-    font-family: 'FontAwesome';
-    margin: 0px;
+ul.social li:nth-child(2)::before,
+ul.social li:nth-child(4)::before {
+    display: none;
 }
 
 ul.social li:nth-child(1)::before {
     content: '\f0ac';
-
-    padding-right: var(--size-small);
-
     grid-column: 1;
     grid-row: 1;
 }
 
 ul.social li:nth-child(2)::after {
     content: '\f0e1';
-
-    padding-left: var(--size-small);
-
     grid-column: 3;
     grid-row: 1;
 }
 
 ul.social li:nth-child(3)::before {
     content: '\f09b';
-    
-    padding-right: var(--size-small);
-
     grid-column: 1;
     grid-row: 2;
 }
 
 ul.social li:nth-child(4)::after {
     content: '\f0e0';
-    
-    padding-left: var(--size-small);
-
     grid-column: 3;
     grid-row: 2;
 }
