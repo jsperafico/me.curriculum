@@ -487,3 +487,51 @@ ul.social li:nth-child(4) {
     }
 
 }
+
+@media print {
+
+    :root {
+        --business-size-multiplier: 1;
+        --business-width: 90mm;
+        --business-height: 50mm;
+        --img-width: 25mm;
+        --img-height: 25mm;
+    }
+
+    body{
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .background {
+        filter: none;
+    }
+
+    article section {
+        transition: none;
+    }
+    
+    article section:hover {
+        transform: none;
+        filter: none;
+    }
+
+    article:hover section:not(:hover) {
+        opacity: 100%;
+        transition: none;
+    }
+
+    article section.about {
+        height: 90%;
+    }
+
+    article img.me {
+        bottom: calc(-1 * 15px);
+        z-index: 5;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
