@@ -328,3 +328,26 @@ ul.social li:nth-child(2),
 ul.social li:nth-child(4) {
     text-align: right;
 }
+
+@keyframes spin {
+    0% { content: "[Mouse hover] to enhance the visualization of each section."; }
+    100% { content:"[Mouse double click] to visualize my Business Card."; }
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+    @keyframes spin {
+        0% { content: "[Tap] to enhance the visualization of each section."; }
+        100% { content:"[Double Tap] to visualize my Business Card."; }
+    }
+
+}
+
+@media only screen and (max-width: 734px) and (orientation: landscape) {
+
+    @keyframes spin {
+        0% { content: "[Tap] to enhance the visualization of each section."; }
+        100% { content:"[Double Tap] to visualize my Business Card."; }
+    }
+
+}
