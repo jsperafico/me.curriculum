@@ -209,9 +209,9 @@ ul.skills {
 }
 
 ul.skills li {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: var(--size-tiny);
-    margin-left: var(--size-small);
+    margin-left: var(--size-tiny);
 }
 
 h1,
