@@ -211,7 +211,7 @@ h2 {
     }
 
     footer {
-        height: var(--size-huge);
+        height: 50px;
     }
 
     footer p {
