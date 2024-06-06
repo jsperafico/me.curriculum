@@ -1,5 +1,5 @@
 const urls = [
-    "https://jsperafico.me",
+    "https://www.jsperafico.me",
     "https://www.linkedin.com/in/jonathanpintosperafico/",
     "https://github.com/jsperafico",
     "mailto:jonathanpsperafico@hotmail.com"
