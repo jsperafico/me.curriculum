@@ -340,11 +340,11 @@ ul.skills {
 
     ul.social li:nth-child(4)::before {
         content: none;
-        padding-right: calc(-1 * var(--size-tiny));
+        padding-right: 0px;
     }
 
-    footer {
-        display: none;
+    ul.social li:nth-child(4) {
+        font-size: 0.5rem;
     }
 
     h1 {

@@ -157,7 +157,40 @@ h2 {
     text-align: center;
 }
 
-/* https://codepen.io/Markshall/pen/wQyWqq */
+footer {
+    position: absolute;
+    top: var(--font-large);
+    right: var(--font-large);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    width: var(--size-huge);
+    height: var(--size-huge);
+
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--color-third);
+    border-radius: 50%;
+}
+
+footer i {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-size: var(--font-huge);
+    color: var(--color-first);
+}
+
+footer a {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    color: var(--color-third);
+    font-weight: bolder;
+}
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
     :root {
@@ -194,4 +227,10 @@ h2 {
         --img-height: 125px;
     }
 
+}
+
+@media print {
+    footer {
+        display: none;
+    }
 }
