@@ -157,6 +157,8 @@ h2 {
     text-align: center;
 }
 
+/* https://codepen.io/Markshall/pen/wQyWqq */
+
 @media only screen and (max-width: 480px) and (orientation: portrait) {
     :root {
         --size-tiny: 2px;
@@ -176,13 +178,9 @@ h2 {
     }
 
     h1 {
-        /* font-size: 18pt; */
         margin-top: 0px;
     }
     
-    h2 {
-        /* font-size: 14pt; */
-    }
 }
 
 @media only screen and (max-width: 734px) and (orientation: landscape) {
@@ -196,15 +194,4 @@ h2 {
         --img-height: 125px;
     }
 
-    h1, h2, p, a, li {
-        /* font-size: 14px; */
-    }
-
-    h1 {
-        /* font-size: 16pt; */
-    }
-    
-    h2 {
-        /* font-size: 12pt; */
-    }
 }
