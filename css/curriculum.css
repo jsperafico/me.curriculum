@@ -400,6 +400,11 @@ ul.social li:nth-child(4) {
     text-align: right;
 }
 
+footer a {
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
     :root {
