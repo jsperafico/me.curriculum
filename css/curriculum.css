@@ -405,6 +405,44 @@ footer a {
     height: 100%;
 }
 
+.hidden {
+    display: none;
+}
+
+article.apple h1 {
+    text-align: center;
+    grid-column: 2 / span 5;
+}
+
+article.apple h2 {
+    text-align: center;
+    grid-column: 2 / span 5;
+}
+
+article.apple a {
+    grid-column: 2 / span 5;
+
+    padding: var(--size-regular);
+    
+    margin-top: var(--size-large);
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+
+    border: none;
+    
+    border-radius: var(--size-regular);
+    background: var(--color-first);
+    box-shadow: var(--size-regular) var(--size-regular) var(--size-huge) #a2c7ca,
+                calc(-1 * var(--size-regular)) calc(-1 * var(--size-regular)) var(--size-huge) #dcffff;
+
+    color: var(--color-third);
+    
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
     :root {

@@ -14,4 +14,14 @@ window.onload = function(e) {
             window.open(urls[index], '_blank').focus();
         });
     }
+
+    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) 
+    {
+        var article = document.querySelector("article:not(.apple)");
+        var background = document.querySelector("div.background");
+        var apple = document.querySelector("article.apple");
+        article.classList.add("hidden");
+        background.classList.add("hidden");
+        apple.classList.remove("hidden");
+    }
 }
