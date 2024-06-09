@@ -4,11 +4,16 @@
     --color-third: #194961;
     --size-tiny: 5px;
     --size-small: 10px;
-    --size-regular: 20px;
+    --size-regular: 25px;
     --size-large: 40px;
     --size-huge: 60px;
     --img-width: 240px;
     --img-height: 240px;
+    --font-tiny: 0.5rem;
+    --font-small: 0.7rem;
+    --font-regular: 0.9rem;
+    --font-large: 1.2rem;
+    --font-huge: 1.5rem;
 }
 
 html {
@@ -30,11 +35,12 @@ ul.skills {
     list-style: none;
     align-content: center;
     text-align: right;
-    margin-right: var(--size-large);
+    margin: 0px;
+    padding-inline-start: 0px;
 }
 
 ul.skills li {
-    font-size: var(--size-regular);
+    font-size: var(--font-tiny);
     margin-bottom: var(--size-tiny);
 }
 
@@ -47,8 +53,8 @@ ul.skills li:hover {
 ul.skills li::after {
     font-family: 'FontAwesome';
     margin: 0px;
-    padding-right: var(--size-small);
-    padding-left: var(--size-regular);
+    padding-right: 0;
+    padding-left: 10px;
 }
 
 ul.skills li:nth-child(1)::after {
@@ -128,54 +134,13 @@ ul.social li:nth-child(4)::before {
     content: '\f0e0';
 }
 
-footer {
-    height: var(--size-large);
-    background-color: var(--color-third);
-    box-shadow: calc(-1 * var(--size-small)) 0px var(--size-regular) #1d5470;
-    text-align: center;
-
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-
-    z-index: 10;
-}
-
-footer p {
-    color: var(--color-first);
-    animation: pulse 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-    0% {
-        color: var(--color-second);
-    }
-    30% {
-        color: var(--color-first);
-    }
-    70% {
-        color: var(--color-first);
-    }
-    100% {
-        color: var(--color-second);
-    }
-}
-
-footer p:after {
-	content: "";
-	animation: spin 6s linear;
-    animation-iteration-count: infinite;
-}
-
 h1, h2, h3, h4, h5, h6, p, a, li {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: var(--color-second);
 }
 
 h1 {
-    font-size: 24pt;
+    font-size: var(--font-huge);
     font-style: italic;
     font-weight: bold;
     align-self: end;
@@ -184,13 +149,15 @@ h1 {
 }
 
 h2 {
-    font-size: 16pt;
+    font-size: var(--font-large);
     font-style: italic;
     font-weight: bold;
     align-self: start;
     margin-top: 0px;
     text-align: center;
 }
+
+/* https://codepen.io/Markshall/pen/wQyWqq */
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
     :root {
@@ -210,22 +177,10 @@ h2 {
         padding-left: 35px;
     }
 
-    footer {
-        height: 50px;
-    }
-
-    footer p {
-        margin: var(--size-small);
-    }
-
     h1 {
-        font-size: 18pt;
         margin-top: 0px;
     }
     
-    h2 {
-        font-size: 14pt;
-    }
 }
 
 @media only screen and (max-width: 734px) and (orientation: landscape) {
@@ -239,23 +194,4 @@ h2 {
         --img-height: 125px;
     }
 
-    h1, h2, p, a, li {
-        font-size: 14px;
-    }
-
-    footer {
-        height: var(--size-huge);
-    }
-
-    footer p {
-        margin: var(--size-small);
-    }
-
-    h1 {
-        font-size: 16pt;
-    }
-    
-    h2 {
-        font-size: 12pt;
-    }
 }
