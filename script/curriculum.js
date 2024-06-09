@@ -5,10 +5,6 @@ const urls = [
     "mailto:jonathanpsperafico@hotmail.com"
 ];
 
-function openBusinessCard() {
-    window.open("index.html", '_self').focus();
-}
-
 window.onload = function(e) {
     var socials = document.querySelectorAll("ul.social li");
     for (let index = 0; index < socials.length; index++) {
@@ -18,19 +14,4 @@ window.onload = function(e) {
             window.open(urls[index], '_blank').focus();
         });
     }
-
-    var article = document.querySelector("article");
-    article.addEventListener('dblclick', () => openBusinessCard());
-
-    // Handle double-tap
-    let lastTapTime = 0;
-    article.addEventListener('touchstart', (e) => {
-        const currentTime = new Date().getTime();
-        const tapInterval = currentTime - lastTapTime;
-        if (tapInterval < 300 && tapInterval > 0) {
-            e.preventDefault();
-            openBusinessCard();
-        }
-        lastTapTime = currentTime;
-    });
 }
