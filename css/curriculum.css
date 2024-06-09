@@ -425,6 +425,17 @@ footer a {
         margin-left: var(--size-huge);
     }
 
+    article section.skills ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article section.skills ul li {
+        font-size: 11px;
+        margin: 0px;
+        padding: 0px;
+    }
+
     h1 {
         font-size: var(--font-large);
     }
@@ -443,12 +454,13 @@ footer a {
     }
 
     ul.social {
-        margin-top: 30px;
+        margin-top: var(--size-regular);
         padding: var(--size-small);
+        font-size: var(--font-small);
     }
 
     article img.me {
-        margin-top: 36px;
+        margin-top: 27px;
     }
 }
 
@@ -472,6 +484,17 @@ footer a {
         margin-left: var(--size-huge);
     }
 
+    article section.skills ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article section.skills ul li {
+        font-size: 11px;
+        margin: 0px;
+        padding: 0px;
+    }
+
     h1 {
         font-size: var(--font-large);
     }
@@ -490,12 +513,13 @@ footer a {
     }
 
     ul.social {
-        margin-top: 30px;
+        margin-top: var(--size-regular);
         padding: var(--size-small);
+        font-size: var(--font-small);
     }
 
     article img.me {
-        margin-top: 36px;
+        margin-top: 27px;
     }
     
 }

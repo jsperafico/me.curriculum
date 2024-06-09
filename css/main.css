@@ -158,9 +158,9 @@ h2 {
 }
 
 footer {
-    position: absolute;
-    top: var(--font-large);
-    right: var(--font-large);
+    position: fixed;
+    top: 110px;
+    right: var(--size-regular);
 
     display: grid;
     grid-template-columns: 1fr;

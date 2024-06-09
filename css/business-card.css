@@ -199,6 +199,9 @@ ul.skills {
         padding-left: 0px;
     }
 
+    footer a {
+        font-size: var(--font-tiny);
+    }
 }
 
 @media only screen and (max-width: 734px) and (orientation: landscape) {
@@ -234,6 +237,18 @@ ul.skills {
         display: none;
     }
 
+    footer {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer i {
+        font-size: 30px;
+    }
+
+    footer a {
+        font-size: var(--font-tiny);
+    }
 }
 
 @media print {
