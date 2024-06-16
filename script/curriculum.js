@@ -20,8 +20,10 @@ window.onload = function(e) {
         var article = document.querySelector("article:not(.apple)");
         var background = document.querySelector("div.background");
         var apple = document.querySelector("article.apple");
+        var me = document.querySelector("img.me");
         article.classList.add("hidden");
         background.classList.add("hidden");
         apple.classList.remove("hidden");
+        me.classList.remove("hidden");
     }
 }
