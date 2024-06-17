@@ -459,8 +459,34 @@ article.apple a {
         --font-huge: 1.5rem;
     }
 
+    html,
+    body {
+	    overflow: auto;
+        margin: auto;
+        padding: auto;
+    }
+
+    
+    .background {
+        margin: auto;
+        padding: auto;
+    }
+
     article {
-        margin-left: var(--size-huge);
+        margin-left: var(--size-small);
+    }
+
+    article section {
+        transition: none;
+    }
+    
+    article section:hover {
+        transform: none;
+    }
+
+    article:hover section:not(:hover) {
+        opacity: 100%;
+        transition: none;
     }
 
     article section.skills ul {
@@ -497,8 +523,8 @@ article.apple a {
         font-size: var(--font-small);
     }
 
-    article img.me {
-        margin-top: 27px;
+    img.me {
+        margin-bottom: 25px;
     }
     
 }
