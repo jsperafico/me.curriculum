@@ -393,70 +393,6 @@ article.apple a {
         --size-large: 40px;
         --size-huge: 60px;
         --section-scale: 1.15;
-        --font-tiny: 0.5rem;
-        --font-small: 0.8rem;
-        --font-regular: 0.9rem;
-        --font-large: 1.2rem;
-        --font-huge: 1.5rem;
-    }
-
-    article {
-        margin-left: var(--size-huge);
-    }
-
-    article section.skills ul {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    article section.skills ul li {
-        font-size: 11px;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    h1 {
-        font-size: var(--font-large);
-    }
-    
-    h2 {
-        font-size: var(--font-regular);
-    }
-
-    h3,
-    h4,
-    h4 a,
-    h5, 
-    h6,
-    p {
-        font-size: var(--font-small);
-    }
-
-    ul.social {
-        margin-top: var(--size-regular);
-        padding: var(--size-small);
-        font-size: var(--font-small);
-    }
-
-    article img.me {
-        margin-top: 27px;
-    }
-}
-
-@media only screen and (max-width: 734px) and (orientation: landscape) {
-
-    :root {
-        --size-tiny: 5px;
-        --size-small: 10px;
-        --size-regular: 20px;
-        --size-large: 40px;
-        --size-huge: 60px;
-        --section-scale: 1.15;
-        --font-tiny: 0.5rem;
-        --font-small: 0.8rem;
-        --font-regular: 0.9rem;
-        --font-large: 1.2rem;
-        --font-huge: 1.5rem;
     }
 
     html,
@@ -465,7 +401,6 @@ article.apple a {
         margin: auto;
         padding: auto;
     }
-
     
     .background {
         margin: auto;
@@ -520,7 +455,86 @@ article.apple a {
     ul.social {
         margin-top: var(--size-regular);
         padding: var(--size-small);
+        font-size: var(--font-regular);
+    }
+
+    img.me {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 734px) and (orientation: landscape) {
+
+    :root {
+        --size-tiny: 5px;
+        --size-small: 10px;
+        --size-regular: 20px;
+        --size-large: 40px;
+        --size-huge: 60px;
+        --section-scale: 1.15;
+    }
+
+    html,
+    body {
+	    overflow: auto;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .background {
+        margin: auto;
+        padding: auto;
+    }
+
+    article {
+        margin-left: var(--size-small);
+    }
+
+    article section {
+        transition: none;
+    }
+    
+    article section:hover {
+        transform: none;
+    }
+
+    article:hover section:not(:hover) {
+        opacity: 100%;
+        transition: none;
+    }
+
+    article section.skills ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article section.skills ul li {
+        font-size: 11px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h1 {
+        font-size: var(--font-large);
+    }
+    
+    h2 {
+        font-size: var(--font-regular);
+    }
+
+    h3,
+    h4,
+    h4 a,
+    h5, 
+    h6,
+    p {
         font-size: var(--font-small);
+    }
+
+    ul.social {
+        margin-top: var(--size-regular);
+        padding: var(--size-small);
+        font-size: var(--font-regular);
     }
 
     img.me {
