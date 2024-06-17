@@ -506,31 +506,16 @@ article.apple a {
 @media print {
 
     :root {
-        --business-size-multiplier: 1;
-        --business-width: 90mm;
-        --business-height: 50mm;
         --img-width: 25mm;
         --img-height: 25mm;
-        --curriculum-width: 180mm;
-        --curriculum-height: 267mm;
-    
-        --size-tiny: 5px;
-        --size-small: 10px;
-        --size-regular: 25px;
-        --size-large: 40px;
-        --size-huge: 60px;
-
-        --font-tiny: 0.4rem;
-        --font-small: 0.6rem;
-        --font-regular: 0.8rem;
-        --font-large: 1.0rem;
-        --font-huge: 1.2rem;
+        --curriculum-height: 287mm;
     }
 
     html,
     body {
         overflow: unset;
-        margin: 0px;
+        margin: auto;
+        padding: auto;
     }
 
     body{
@@ -540,6 +525,11 @@ article.apple a {
 
     .background {
         filter: none;
+        margin-left: 30px;
+    }
+
+    article {
+        grid-template-rows: 30px 30px 40px 1fr 50px 1.15fr 0.8fr 0.65fr 30px 30px 30px 30px 30px 50px 30px 30px 1fr;
     }
 
     article section {
@@ -559,13 +549,12 @@ article.apple a {
         height: 90%;
     }
 
-    article img.me {
-        margin-top: 100px;
+    img.me {
         z-index: 5;
     }
     
     ul.skills li {
-        font-size: var(--font-tiny);
+        font-size: var(--font-small);
     }
 
     ul.skills li:hover {
@@ -574,8 +563,14 @@ article.apple a {
         transition: none;
     }
 
+    ul.social {
+        height: -moz-fit-content;
+        height: fit-content;
+        align-self: self-end;
+    }
+
     ul.social li {
-        font-size: var(--font-small);
+        font-size: var(--font-regular);
     }
 
     article section.gap {
