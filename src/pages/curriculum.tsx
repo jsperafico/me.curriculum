@@ -14,6 +14,8 @@ import {
 
 import { ScrollArea } from "@/components/ui/scroll-area"
 
+import me from "../assets/me-mid.jpg"
+
 
 
 const CurriculumPage = React.forwardRef<
@@ -26,9 +28,12 @@ const CurriculumPage = React.forwardRef<
     {...props}>
 
     <div className="flex flex-row h-[70vh] mx-9">
-      <section className="flex-[3] border border-cyan-900 rounded-r-md h-full hover:transition-all ease-in-out delay-150 duration-500 bg-center bg-cover bg-no-repeat me-gradient hover:me-without-gradient from-cyan-500 to-blue-500 prose prose-sm shadow-cyan-800 shadow-md">
-        <h1 className="text-center text-cyan-100 italic font-bold mb-0 bg-cyan-800">Jonathan Pinto Sperafico</h1>
-        <h2 className="text-center text-cyan-100 italic font-bold mt-3 bg-cyan-800">Sr. Test Automation Engineer</h2>
+      <section className="group flex-[3] relative overflow-hidden text-center border border-cyan-900 rounded-r-md h-full hover:transition-all ease-in-out delay-150 duration-500 bg-center bg-cover bg-no-repeat from-cyan-500 to-blue-500 prose prose-sm shadow-cyan-800 shadow-md">
+        <img src={me} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0" />
+        <div className="absolute inset-0 flex flex-col items-start justify-start">
+          <h1 className="w-full text-cyan-100 italic font-bold mb-0 bg-cyan-800">Jonathan Pinto Sperafico</h1>
+          <h2 className="w-full text-cyan-100 italic font-bold mt-3 bg-cyan-800">Sr. Test Automation Engineer</h2>
+        </div>
       </section>
 
       <section className="group flex-[4] flex flex-col-reverse w-min border border-cyan-900 rounded-r-md h-full ease-in-out delay-150 duration-500 bg-cyan-800 shadow-cyan-800 shadow-md hover:flex-[9] hover:bg-cyan-100 hover:transition-all">
