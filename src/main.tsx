@@ -5,7 +5,7 @@ import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import { BusinessCardPage } from './pages/business-card.tsx'
 import { Layout } from './components/layout.tsx'
-import ErrorPage from './pages/error.tsx'
+import { ErrorPage } from './pages/error.tsx'
 import { CurriculumPage } from './pages/curriculum.tsx'
 
 const router = createBrowserRouter(
