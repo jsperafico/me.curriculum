@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Primitive } from '@radix-ui/react-primitive';
 
 import { cn } from "@/lib/utils"
 
@@ -15,38 +16,45 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 
+declare const COUNTRIES: readonly [
+  "Brazil",
+  "Finland",
+  "Ireland",
+  "Italy",
+  "Poland"
+];
+type Countries = (typeof COUNTRIES)[number];
 
-interface FlagAttribute extends Omit<React.HTMLAttributes<HTMLDivElement>,
-  'Brazil' | 'Finland' | 'Ireland' | 'Italy' | 'Poland'> {
+interface FlagAttribute extends React.ComponentPropsWithoutRef<typeof Primitive.div> {
   /**
    * A string value for the flag.
    */
-  flag: string;
+  flag: Countries;
 }
 
 const flags = [
   {
-    flag: "Brazil",
+    flag: COUNTRIES[0],
     src: Brazil,
     alt: "Brazillian Flag",
   },
   {
-    flag: "Finland",
+    flag: COUNTRIES[1],
     src: Finland,
     alt: "Finnish Flag",
   },
   {
-    flag: "Ireland",
+    flag: COUNTRIES[2],
     src: Ireland,
     alt: "Irish Flag",
   },
   {
-    flag: "Italy",
+    flag: COUNTRIES[3],
     src: Italy,
     alt: "Italian Flag",
   },
   {
-    flag: "Poland",
+    flag: COUNTRIES[4],
     src: Poland,
     alt: "Polish Flag",
   },
@@ -68,9 +76,6 @@ function render(flag: string) {
       </TooltipContent>
     </Tooltip>
   </TooltipProvider>
-
-
-  return
 }
 
 const Flag = React.forwardRef<
