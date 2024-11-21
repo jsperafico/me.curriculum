@@ -21,6 +21,7 @@ import '@/index.css'
 // require('./commands')
 
 import { mount } from 'cypress/react18'
+import 'cypress-each'
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
