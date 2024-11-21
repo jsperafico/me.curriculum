@@ -118,7 +118,7 @@ const CurriculumPage = React.forwardRef<
             <Accordion type="single" defaultValue="item-1" collapsible>
               <AccordionItem value="item-1" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Finland" />
+                  <Flag flag="Finland" asChild />
                   <h4><a className="prose prose-sm" href="https://www.relexsolutions.com/" target="_blank">RELEX Solutions</a></h4>
                   <h5 className="prose prose-sm">Sr. Software Test Automation Engineer</h5>
                   <h6 className="prose prose-sm">Dec'21 - May'24</h6>
@@ -139,7 +139,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-2" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Poland" />
+                  <Flag flag="Poland" asChild />
                   <h4><a className="prose prose-sm" href="https://www.epam.com/" target="_blank">EPAM Systems</a></h4>
                   <h5 className="prose prose-sm">Sr. Software Test Automation Engineer</h5>
                   <h6 className="prose prose-sm">Mar'20 - Dec'21</h6>
@@ -156,7 +156,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-3" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4><a className="prose prose-sm" href="https://procergs.rs.gov.br/inicial" target="_blank">PROCERGS</a></h4>
                   <h5 className="prose prose-sm">Test Automation Engineer</h5>
                   <h6 className="prose prose-sm">Jan'15 - Feb'20</h6>
@@ -172,7 +172,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-4" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4><a className="prose prose-sm" href="https://procergs.rs.gov.br/inicial" target="_blank">PROCERGS</a></h4>
                   <h5 className="prose prose-sm">Java Software Developer</h5>
                   <h6 className="prose prose-sm">Dec'13 - Jan'15</h6>
@@ -187,7 +187,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-5" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4><a className="prose prose-sm" href="https://www.goodcard.com.br/embratec/" target="_blank">Embratec</a></h4>
                   <h5 className="prose prose-sm">Java Software Developer</h5>
                   <h6 className="prose prose-sm">May'13 - Dec'13</h6>
@@ -202,7 +202,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-6" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4><a className="prose prose-sm" href="https://iob.com.br/" target="_blank">IOB (Sage)</a></h4>
                   <h5 className="prose prose-sm">Java Software Developer</h5>
                   <h6 className="prose prose-sm">Jul'12 - Apr'13</h6>
@@ -217,7 +217,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-7" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4 className="prose prose-sm">MS</h4>
                   <h5 className="prose prose-sm">Software Developer</h5>
                   <h6 className="prose prose-sm">Mar'10 - Deb'12</h6>
@@ -230,7 +230,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-8" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-work">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4><a className="prose prose-sm" href="https://www.unisinos.br/" target="_blank">UNISINOS</a></h4>
                   <h5 className="prose prose-sm">Front-end Developer</h5>
                   <h6 className="prose prose-sm">Aug'09 - Mar'10</h6>
@@ -259,7 +259,7 @@ const CurriculumPage = React.forwardRef<
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-education">
-                  <Flag flag="Finland" />
+                  <Flag flag="Finland" asChild />
                   <h4><a className="prose prose-sm" href="https://www.kktavastia.fi/vanajaveden-opisto/" target="_blank">Vanajaveden Opisto</a></h4>
                   <h5 className="prose prose-sm">Finnish A1+</h5>
                   <h6 className="prose prose-sm">Aug'24 - Dec'24</h6>
@@ -268,7 +268,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-2" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-education">
-                  <Flag flag="Ireland" />
+                  <Flag flag="Ireland" asChild />
                   <h4><a className="prose prose-sm" href="https://studyinireland.ie/" target="_blank">ISI Dublin</a></h4>
                   <h5 className="prose prose-sm">English B2+</h5>
                   <h6 className="prose prose-sm">Mar'12 - May'12</h6>
@@ -277,7 +277,7 @@ const CurriculumPage = React.forwardRef<
 
               <AccordionItem value="item-3" className="border-cyan-800 border-b-2">
                 <AccordionTrigger className="grid grid-flow-col head-education">
-                  <Flag flag="Brazil" />
+                  <Flag flag="Brazil" asChild />
                   <h4><a className="prose prose-sm" href="https://www.unisinos.br/" target="_blank">UNISINOS</a></h4>
                   <h5 className="prose prose-sm">Game Development</h5>
                   <h6 className="prose prose-sm">2007 - 2011</h6>

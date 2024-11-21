@@ -1,13 +1,13 @@
 import * as React from "react"
-import { Primitive } from '@radix-ui/react-primitive';
+import { Primitive, PrimitivePropsWithRef } from '@radix-ui/react-primitive';
 
 import { cn } from "@/lib/utils"
 
-import Brazil from "../assets/brazil.svg"
-import Finland from "../assets/finland.svg"
-import Ireland from "../assets/ireland.svg"
-import Italy from "../assets/italy.svg"
-import Poland from "../assets/poland.svg"
+import Brazil from "@/assets/brazil.svg"
+import Finland from "@/assets/finland.svg"
+import Ireland from "@/assets/ireland.svg"
+import Italy from "@/assets/italy.svg"
+import Poland from "@/assets/poland.svg"
 
 import {
   Tooltip,
@@ -25,7 +25,7 @@ declare const COUNTRIES: readonly [
 ];
 type Countries = (typeof COUNTRIES)[number];
 
-interface FlagAttribute extends React.ComponentPropsWithoutRef<typeof Primitive.div> {
+interface FlagAttribute extends PrimitivePropsWithRef<typeof Primitive.div> {
   /**
    * A string value for the flag.
    */
@@ -34,33 +34,33 @@ interface FlagAttribute extends React.ComponentPropsWithoutRef<typeof Primitive.
 
 const flags = [
   {
-    flag: COUNTRIES[0],
+    flag: "Brazil",
     src: Brazil,
     alt: "Brazillian Flag",
   },
   {
-    flag: COUNTRIES[1],
+    flag: "Finland",
     src: Finland,
     alt: "Finnish Flag",
   },
   {
-    flag: COUNTRIES[2],
+    flag: "Ireland",
     src: Ireland,
     alt: "Irish Flag",
   },
   {
-    flag: COUNTRIES[3],
+    flag: "Italy",
     src: Italy,
     alt: "Italian Flag",
   },
   {
-    flag: COUNTRIES[4],
+    flag: "Poland",
     src: Poland,
     alt: "Polish Flag",
   },
 ]
 
-function render(flag: string) {
+function render(flag: string, asChild?: boolean) {
   let item = flags.filter(f => f.flag == flag)[0]
 
   if (!item)
@@ -68,7 +68,7 @@ function render(flag: string) {
 
   return <TooltipProvider>
     <Tooltip>
-      <TooltipTrigger>
+      <TooltipTrigger asChild={asChild}>
         <img src={item.src} alt={item.alt} className="h-5" />
       </TooltipTrigger>
       <TooltipContent className="bg-cyan-800 text-cyan-100" side="bottom">
@@ -81,13 +81,13 @@ function render(flag: string) {
 const Flag = React.forwardRef<
   HTMLDivElement,
   FlagAttribute
->(({ className, flag, ...props }, ref) => (
+>(({ className, flag, asChild, ...props }, ref) => (
   <div
     ref={ref}
     className={cn("h-5", className)}
     {...props}>
 
-    {render(flag)}
+    {render(flag, asChild)}
   </div>
 ))
 Flag.displayName = "Flag"
