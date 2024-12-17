@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Primitive, PrimitivePropsWithRef } from '@radix-ui/react-primitive';
+import { Primitive, PrimitivePropsWithRef } from '@radix-ui/react-primitive'
 
 import { cn } from "@/lib/utils"
 
