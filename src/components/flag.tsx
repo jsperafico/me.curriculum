@@ -61,7 +61,7 @@ const flags = [
 ]
 
 function render(flag: string, asChild?: boolean) {
-  let item = flags.filter(f => f.flag == flag)[0]
+  const item = flags.filter(f => f.flag == flag)[0]
 
   if (!item)
     return null
