@@ -2,6 +2,8 @@ import * as React from "react"
 import { Separator } from "./ui/separator"
 import { cn } from "@/lib/utils"
 
+// TODO Warning: forwardRef render functions accept exactly two parameters: props and ref. Did you forget to use the ref parameter?
+
 function render(className: string | undefined, props: {}) {
 
   return <ul className="list-none text-right m-0 start-0 content-center">
