@@ -66,11 +66,11 @@ function render(flag: string, asChild?: boolean) {
   if (!item)
     return null
 
-  return <div className="@container">
-    <div className="@xs:block @sm:hidden">
+  return <>
+    <div className="xs:block sm:hidden">
       <img data-tooltip={false} src={item.src} alt={item.alt} className="h-5" />
     </div>
-    <div className="@xs:hidden @sm:block">
+    <div className="xs:hidden sm:block">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild={asChild}>
@@ -82,7 +82,7 @@ function render(flag: string, asChild?: boolean) {
         </Tooltip>
       </TooltipProvider>
     </div>
-  </div>
+  </>
 }
 
 const Flag = React.forwardRef<

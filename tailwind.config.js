@@ -12,6 +12,9 @@ export default {
 				'2xs': '14rem',
 				'3xs': '10rem',
 			},
+			screens: {
+				'xs': '340px',
+			},
 		},
 	},
 	plugins: [typography, transform3d, container_query],
