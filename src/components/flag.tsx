@@ -66,16 +66,23 @@ function render(flag: string, asChild?: boolean) {
   if (!item)
     return null
 
-  return <TooltipProvider>
-    <Tooltip>
-      <TooltipTrigger asChild={asChild}>
-        <img src={item.src} alt={item.alt} className="h-5" />
-      </TooltipTrigger>
-      <TooltipContent className="bg-cyan-800 text-cyan-100" side="bottom">
-        <p>{item.flag}</p>
-      </TooltipContent>
-    </Tooltip>
-  </TooltipProvider>
+  return <div className="@container">
+    <div className="@xs:block @sm:hidden">
+      <img data-tooltip={false} src={item.src} alt={item.alt} className="h-5" />
+    </div>
+    <div className="@xs:hidden @sm:block">
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild={asChild}>
+            <img data-tooltip={true} src={item.src} alt={item.alt} className="h-5" />
+          </TooltipTrigger>
+          <TooltipContent className="bg-cyan-800 text-cyan-100" side="bottom">
+            <p>{item.flag}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </div>
+  </div>
 }
 
 const Flag = React.forwardRef<
@@ -92,4 +99,4 @@ const Flag = React.forwardRef<
 ))
 Flag.displayName = "Flag"
 
-export { Flag }
+export { Flag, type Countries }
