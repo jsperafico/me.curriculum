@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Flag, Countries } from "@/components/flag"
+import { Flag, Country } from "@/components/flag"
 
 import FlagData from "../fixtures/flags.json"
 
@@ -12,7 +12,7 @@ describe('Available Flags', () => {
 
     FlagData.forEach((data) => {
       it(`"${data.country}" should have the appropriate flag and tooltip`, () => {
-        cy.mount(<Flag flag={data.country as Countries} />)
+        cy.mount(<Flag country={data.country as Country} />)
         cy.get('button > .h-5').should('have.attr', 'src').should('include', data.src)
         cy.get('div > button').focus()
         cy.get('div > button').should('have.focus')
@@ -37,7 +37,7 @@ describe('Available Flags', () => {
           throw error
         })
 
-        cy.mount(<Flag flag={data.country as Countries} />)
+        cy.mount(<Flag country={data.country as Country} />)
         cy.get('[data-tooltip=false]').should('have.attr', 'src').should('include', data.src)
 
         cy.get('[data-tooltip=false]').focus()

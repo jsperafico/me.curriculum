@@ -36,8 +36,8 @@ function renderAbout() {
     <div className="@container flex-grow m-4">
       <div className="grid grid-cols-2">
         <p className="col-span-2 justify-self-center prose prose-sm text-cyan-100 group-hover:text-cyan-800">Citizenship:</p>
-        <Flag flag="Italy" className="justify-self-end" />
-        <Flag flag="Brazil" />
+        <Flag country="Italy" className="justify-self-end" />
+        <Flag country="Brazil" />
       </div>
       <Separator className="my-3 border-cyan-100 group-hover:border-cyan-800 border-y" orientation="horizontal"></Separator>
       <p className="hidden @sm:block prose prose-sm w-auto max-w-max text-justify text-cyan-100 group-hover:text-cyan-800">
@@ -73,7 +73,7 @@ function renderWorkExperience() {
         <Accordion type="single" defaultValue="item-1" collapsible>
           <AccordionItem value="item-1" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Finland" asChild />
+              <Flag country="Finland" asChild />
               <h4><a className="prose prose-sm" href="https://www.relexsolutions.com/" target="_blank">RELEX Solutions</a></h4>
               <h5 className="prose prose-sm">Sr. Software Test Automation Engineer</h5>
               <h6 className="prose prose-sm">Dec'21 - May'24</h6>
@@ -94,7 +94,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-2" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Poland" asChild />
+              <Flag country="Poland" asChild />
               <h4><a className="prose prose-sm" href="https://www.epam.com/" target="_blank">EPAM Systems</a></h4>
               <h5 className="prose prose-sm">Sr. Software Test Automation Engineer</h5>
               <h6 className="prose prose-sm">Mar'20 - Dec'21</h6>
@@ -111,7 +111,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-3" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4><a className="prose prose-sm" href="https://procergs.rs.gov.br/inicial" target="_blank">PROCERGS</a></h4>
               <h5 className="prose prose-sm">Test Automation Engineer</h5>
               <h6 className="prose prose-sm">Jan'15 - Feb'20</h6>
@@ -127,7 +127,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-4" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4><a className="prose prose-sm" href="https://procergs.rs.gov.br/inicial" target="_blank">PROCERGS</a></h4>
               <h5 className="prose prose-sm">Java Software Developer</h5>
               <h6 className="prose prose-sm">Dec'13 - Jan'15</h6>
@@ -142,7 +142,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-5" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4><a className="prose prose-sm" href="https://www.goodcard.com.br/embratec/" target="_blank">Embratec</a></h4>
               <h5 className="prose prose-sm">Java Software Developer</h5>
               <h6 className="prose prose-sm">May'13 - Dec'13</h6>
@@ -157,7 +157,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-6" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4><a className="prose prose-sm" href="https://iob.com.br/" target="_blank">IOB (Sage)</a></h4>
               <h5 className="prose prose-sm">Java Software Developer</h5>
               <h6 className="prose prose-sm">Jul'12 - Apr'13</h6>
@@ -172,7 +172,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-7" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4 className="prose prose-sm">MS</h4>
               <h5 className="prose prose-sm">Software Developer</h5>
               <h6 className="prose prose-sm">Mar'10 - Deb'12</h6>
@@ -185,7 +185,7 @@ function renderWorkExperience() {
 
           <AccordionItem value="item-8" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-work">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4><a className="prose prose-sm" href="https://www.unisinos.br/" target="_blank">UNISINOS</a></h4>
               <h5 className="prose prose-sm">Front-end Developer</h5>
               <h6 className="prose prose-sm">Aug'09 - Mar'10</h6>
@@ -216,7 +216,7 @@ function renderEducation() {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-education">
-              <Flag flag="Finland" asChild />
+              <Flag country="Finland" asChild />
               <h4><a className="prose prose-sm" href="https://www.kktavastia.fi/vanajaveden-opisto/" target="_blank">Vanajaveden Opisto</a></h4>
               <h5 className="prose prose-sm">Finnish A1.3</h5>
               <h6 className="prose prose-sm">Aug'24 - Dec'24</h6>
@@ -225,7 +225,7 @@ function renderEducation() {
 
           <AccordionItem value="item-2" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-education">
-              <Flag flag="Ireland" asChild />
+              <Flag country="Ireland" asChild />
               <h4><a className="prose prose-sm" href="https://studyinireland.ie/" target="_blank">ISI Dublin</a></h4>
               <h5 className="prose prose-sm">English B2+</h5>
               <h6 className="prose prose-sm">Mar'12 - May'12</h6>
@@ -234,7 +234,7 @@ function renderEducation() {
 
           <AccordionItem value="item-3" className="border-cyan-800 border-b-2">
             <AccordionTrigger className="grid grid-flow-col head-education">
-              <Flag flag="Brazil" asChild />
+              <Flag country="Brazil" asChild />
               <h4><a className="prose prose-sm" href="https://www.unisinos.br/" target="_blank">UNISINOS</a></h4>
               <h5 className="prose prose-sm">Game Development</h5>
               <h6 className="prose prose-sm">2007 - 2011</h6>

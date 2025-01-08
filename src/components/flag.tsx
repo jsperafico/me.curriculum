@@ -23,13 +23,13 @@ declare const COUNTRIES: readonly [
   "Italy",
   "Poland"
 ];
-type Countries = (typeof COUNTRIES)[number];
+type Country = (typeof COUNTRIES)[number];
 
 interface FlagAttribute extends PrimitivePropsWithRef<typeof Primitive.div> {
   /**
    * A string value for the flag.
    */
-  flag: Countries;
+  country: Country;
 }
 
 const flags = [
@@ -88,15 +88,15 @@ function render(flag: string, asChild?: boolean) {
 const Flag = React.forwardRef<
   HTMLDivElement,
   FlagAttribute
->(({ className, flag, asChild, ...props }, ref) => (
+>(({ className, country, asChild, ...props }, ref) => (
   <div
     ref={ref}
     className={cn("h-5", className)}
     {...props}>
 
-    {render(flag, asChild)}
+    {render(country, asChild)}
   </div>
 ))
 Flag.displayName = "Flag"
 
-export { Flag, type Countries }
+export { Flag, type Country }
