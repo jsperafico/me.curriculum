@@ -1,0 +1,26 @@
+[
+  {
+    "index": 1,
+    "type": "website",
+    "href": "https://www.jsperafico.me",
+    "text": "https://www.jsperafico.me"
+  },
+  {
+    "index": 2,
+    "type": "linkedin",
+    "href": "https://www.linkedin.com/in/jonathanpintosperafico/",
+    "text": "jonathanpintosperafico"
+  },
+  {
+    "index": 3,
+    "type": "github",
+    "href": "https://github.com/jsperafico",
+    "text": "jsperafico"
+  },
+  {
+    "index": 4,
+    "type": "mail",
+    "href": "mailto:hire@jsperafico.me",
+    "text": "hire@jsperafico.me"
+  }
+]

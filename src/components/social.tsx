@@ -2,9 +2,9 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 
-function render(className: string | undefined, props: {}) {
+function render(className: string | undefined, props: {}, ref: React.ForwardedRef<HTMLUListElement>) {
 
-  return <ul className="m-auto list-none text-left">
+  return <ul ref={ref} className="m-auto list-none text-left">
     <li className={cn("my-3 px-3 cursor-pointer transition-colors hover:text-cyan-800 hover:bg-cyan-100 before:font-family-awesome before:social-website", className)} {...props}>
       <a className="pl-2" href="https://www.jsperafico.me" target="_blank">https://www.jsperafico.me</a>
     </li>
@@ -21,10 +21,10 @@ function render(className: string | undefined, props: {}) {
 }
 
 const Social = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }) => (
-  render(className, props)
+  HTMLUListElement,
+  React.HTMLAttributes<HTMLUListElement>
+>(({ className, ...props }, ref) => (
+  render(className, props, ref)
 ))
 
 Social.displayName = "Social"
