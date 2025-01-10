@@ -26,7 +26,7 @@ const Header = React.forwardRef<
         <NavigationMenuLink href='/curriculum' className="before:mr-2 before:font-family-awesome before:content-['\f570'] max-md:landscape:text-[0px] max-md:landscape:before:text-sm max-md:landscape:before:m-auto">Curriculum</NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem className="hidden text-center select-none rounded-md leading-none no-underline outline-none transition-colors border p-2 text-cyan-100 shadow-cyan-200 shadow-sm hover:bg-cyan-100 hover:text-cyan-800 focus:bg-cyan-100 focus:text-cyan-800 max-md:landscape:w-full">
-        <NavigationMenuLink href='/projects' className="before:mr-2 before:font-family-awesome before:content-['\f07c'] max-md:landscape:text-[0px] max-md:landscape:before:text-sm max-md:landscape:before:m-auto">Projects</NavigationMenuLink>
+        <NavigationMenuLink href='/articles' className="before:mr-2 before:font-family-awesome before:content-['\f07c'] max-md:landscape:text-[0px] max-md:landscape:before:text-sm max-md:landscape:before:m-auto">Articles</NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>
   </NavigationMenu>

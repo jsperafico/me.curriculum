@@ -7,12 +7,17 @@ import { BusinessCardPage } from './pages/business-card.tsx'
 import { Layout } from './components/layout.tsx'
 import { ErrorPage } from './pages/error.tsx'
 import { CurriculumPage } from './pages/curriculum.tsx'
+import { ArticlesPage } from './pages/articles.tsx'
+import { ArticleIdPage } from './pages/article-id.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />} errorElement={<ErrorPage />}>
       <Route path='/' element={<BusinessCardPage />} />
       <Route path='curriculum' element={<CurriculumPage />} />
+      <Route path='articles' element={<ArticlesPage />} />
+
+      <Route path='articles/:id' element={<ArticleIdPage />} />
     </Route>
   ),
   {
