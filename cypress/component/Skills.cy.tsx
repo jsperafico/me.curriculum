@@ -14,7 +14,7 @@ describe('Skills', () => {
     })
 
     SkillsData.skills.forEach((data) => {
-      it(`"${data.label}" skill is listed and have "${data.experience}/5" experience grade aside`, () => {
+      it(`"${data.label}" skill should be listed and have "${data.experience}/5" experience grade aside`, () => {
         cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
 
         cy.get(`.list-none > :nth-child(${data.index})`).then(($li) => {
@@ -31,7 +31,7 @@ describe('Skills', () => {
       })
     })
 
-    it('Skills are properly separated', () => {
+    it('Skills should be properly separated', () => {
       SkillsData.spacers.forEach((data) => {
         cy.get(`.list-none > :nth-child(${data.index})`).should('have.attr', 'data-orientation', 'horizontal')
       })
