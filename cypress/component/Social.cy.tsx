@@ -14,8 +14,10 @@ describe('Contacts', () => {
 
     SocialData.forEach((data) => {
       it(`"${data.type}" can be the best way to reach me out`, () => {
-        cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.text).should('have.class', `before:social-${data.type}`)
-        cy.get(`.list-none > :nth-child(${data.index}) > a`).should('have.attr', 'href', data.href)
+        cy.get(`.list-none > :nth-child(${data.index}) > a`).should('have.attr', 'href', data.href).should('be.visible')
+
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div`).should('have.class', `before:social-${data.type}`).should('be.visible')
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div > span`).should('contain.text', data.text).should('be.visible')
       })
     })
   })
@@ -26,7 +28,13 @@ describe('Contacts', () => {
       cy.mount(<Social />)
     })
 
-    it(`No text should be visible`, () => {
+    SocialData.forEach((data) => {
+      it(`Label for "${data.type}" can't be visible`, () => {
+        cy.get(`.list-none > :nth-child(${data.index}) > a`).should('have.attr', 'href', data.href).should('be.visible')
+
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div`).should('have.class', `before:social-${data.type}`).should('be.visible')
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div > span`).should('contain.text', data.text).should('not.be.visible')
+      })
     })
   })
 })
