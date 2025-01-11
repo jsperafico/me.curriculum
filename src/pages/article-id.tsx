@@ -1,4 +1,4 @@
-import * as React from "react"
+/* import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { useParams } from 'react-router-dom'
@@ -19,4 +19,4 @@ const ArticleIdPage = React.forwardRef<
 
 ArticleIdPage.displayName = "ArticleIdPage"
 
-export { ArticleIdPage }
+export { ArticleIdPage } */
