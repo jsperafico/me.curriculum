@@ -227,7 +227,7 @@ function renderEducation() {
             <AccordionTrigger className="grid grid-flow-col head-education">
               <Flag country="Ireland" asChild />
               <h4><a className="prose prose-sm" href="https://studyinireland.ie/" target="_blank">ISI Dublin</a></h4>
-              <h5 className="prose prose-sm">English B2+</h5>
+              <h5 className="prose prose-sm">English B2</h5>
               <h6 className="prose prose-sm">Mar'12 - May'12</h6>
             </AccordionTrigger>
           </AccordionItem>

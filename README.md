@@ -40,7 +40,7 @@ I am an experienced engineer with a strong proficiency in software development a
 | Location | Institution                                                         |             Area |          Period |
 | :------- | :------------------------------------------------------------------ | ---------------: | --------------: |
 | Finland  | [Vanajaveden Opisto](https://www.kktavastia.fi/vanajaveden-opisto/) |     Finnish A1.3 | Aug'24 - Dec'24 |
-| Ireland  | [ISI Dublin](https://studyinireland.ie/)                            |      English B2+ | Mar'12 - May'12 |
+| Ireland  | [ISI Dublin](https://studyinireland.ie/)                            |       English B2 | Mar'12 - May'12 |
 | Brazil   | [Unisinos](https://www.unisinos.br/)                                | Game Development |     2007 - 2011 |
 
 ## Contacts
