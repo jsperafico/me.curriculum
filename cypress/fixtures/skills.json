@@ -3,57 +3,95 @@
     {
       "index": 1,
       "label": "Java",
-      "experience": "5"
+      "experience": "5",
+      "responsive": {
+        "all": "visible"
+      }
     },
     {
       "index": 2,
       "label": "Python",
-      "experience": "3"
+      "experience": "3",
+      "responsive": {
+        "all": "visible"
+      }
     },
     {
       "index": 3,
       "label": "NodeJS",
-      "experience": "2"
+      "experience": "2",
+      "responsive": {
+        "portrait": "hidden",
+        "landscape": "visible"
+      }
     },
     {
       "index": 4,
       "label": "Rust",
-      "experience": "1"
+      "experience": "1",
+      "responsive": {
+        "portrait": "hidden",
+        "landscape": "hidden"
+      }
     },
     {
       "index": 6,
       "label": "Selenium",
-      "experience": "5"
+      "experience": "5",
+      "responsive": {
+        "all": "visible"
+      }
     },
     {
       "index": 7,
       "label": "JMeter",
-      "experience": "4"
+      "experience": "4",
+      "responsive": {
+        "all": "visible"
+      }
     },
     {
       "index": 8,
       "label": "Cypress",
-      "experience": "3"
+      "experience": "3",
+      "responsive": {
+        "all": "visible"
+      }
     },
     {
       "index": 9,
       "label": "RestAssured",
-      "experience": "2"
+      "experience": "2",
+      "responsive": {
+        "portrait": "hidden",
+        "landscape": "hidden"
+      }
     },
     {
       "index": 11,
       "label": "Docker",
-      "experience": "5"
+      "experience": "5",
+      "responsive": {
+        "all": "visible"
+      }
     },
     {
       "index": 12,
       "label": "Gitlab",
-      "experience": "4"
+      "experience": "4",
+      "responsive": {
+        "portrait": "hidden",
+        "landscape": "visible"
+      }
     },
     {
       "index": 13,
       "label": "Kubernetes",
-      "experience": "3"
+      "experience": "3",
+      "responsive": {
+        "portrait": "hidden",
+        "landscape": "visible"
+      }
     }
   ],
   "spacers": [

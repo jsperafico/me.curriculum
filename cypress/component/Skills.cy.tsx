@@ -25,7 +25,7 @@ describe('Skills', () => {
 
             expect(rectLi.height).to.be.lessThan(rectSpan.height * 2);
             expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD);
-            expect(rectSpan.left - rectLi.left).to.be.greaterThan(THRESHOLD);
+            expect(rectLi.left).to.be.equals(rectSpan.left);
           })
         })
       })
@@ -40,12 +40,59 @@ describe('Skills', () => {
 
   context('Responsive design', () => {
     beforeEach(() => {
-      cy.viewport("iphone-6")
       cy.mount(<Skills />)
     })
 
+    context('Desktop', () => {
+      SkillsData.skills.forEach((data) => {
+        it(`"${data.label}" should be visible in "desktop"`, () => {
+          cy.viewport("macbook-13")
+
+          cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
+
+          cy.get(`.list-none > :nth-child(${data.index})`).should('be.visible')
+        })
+      })
+    })
+
+    context('Mobile Portrait', () => {
+      SkillsData.skills.forEach((data) => {
+        let visible = data.responsive.portrait == undefined ? data.responsive.all : data.responsive.portrait
+
+        it(`"${data.label}" should be "${visible}" in "portrait"`, () => {
+          cy.viewport("iphone-6", "portrait")
+
+          cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
+
+          if (visible == "visible") {
+            cy.get(`.list-none > :nth-child(${data.index})`).should('be.visible')
+          } else {
+            cy.get(`.list-none > :nth-child(${data.index})`).should('not.be.visible')
+          }
+        })
+      })
+    })
+
+    context('Mobile Landscape', () => {
+      SkillsData.skills.forEach((data) => {
+        let visible = data.responsive.landscape == undefined ? data.responsive.all : data.responsive.landscape
+
+        it(`"${data.label}" should be "${visible}" in "landscape"`, () => {
+          cy.viewport("iphone-6", "landscape")
+
+          cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
+
+          if (visible == "visible") {
+            cy.get(`.list-none > :nth-child(${data.index})`).should('be.visible')
+          } else {
+            cy.get(`.list-none > :nth-child(${data.index})`).should('not.be.visible')
+          }
+        })
+      })
+    })
+
     SkillsData.skills.forEach((data) => {
-      it(`"${data.experience}/5" experience should be bellow of "${data.label}"`, () => {
+      it(`"${data.experience}/5" experience should be aside of "${data.label}"`, () => {
         cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
 
         cy.get(`.list-none > :nth-child(${data.index})`).then(($li) => {
@@ -54,8 +101,7 @@ describe('Skills', () => {
           cy.get(`.list-none > :nth-child(${data.index}) > span`).then(($span) => {
             const rectSpan = $span[0].getBoundingClientRect();
 
-            expect(rectLi.height).to.be.equal(rectSpan.height * 2);
-            expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD);
+            expect(rectLi.height).to.be.equal(rectSpan.height);
             expect(rectSpan.left - rectLi.left).to.be.lessThan(THRESHOLD);
           })
         })
