@@ -1,4 +1,3 @@
-import typography from '@tailwindcss/typography'
 import transform3d from '@xpd/tailwind-3dtransforms'
 import container_query from '@tailwindcss/container-queries'
 
@@ -20,6 +19,6 @@ export default {
 			},
 		},
 	},
-	plugins: [typography, transform3d, container_query],
+	plugins: [transform3d, container_query],
 }
 
