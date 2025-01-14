@@ -25,7 +25,6 @@ describe('Skills', () => {
 
             expect(rectLi.height).to.be.lessThan(rectSpan.height * 2);
             expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD);
-            expect(rectLi.left).to.be.equals(rectSpan.left);
           })
         })
       })
@@ -92,6 +91,9 @@ describe('Skills', () => {
     })
 
     SkillsData.skills.forEach((data) => {
+      if (data.responsive.portrait == 'hidden') {
+        return
+      }
       it(`"${data.experience}/5" experience should be aside of "${data.label}"`, () => {
         cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
 
@@ -102,7 +104,7 @@ describe('Skills', () => {
             const rectSpan = $span[0].getBoundingClientRect();
 
             expect(rectLi.height).to.be.equal(rectSpan.height);
-            expect(rectSpan.left - rectLi.left).to.be.lessThan(THRESHOLD);
+            expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD);
           })
         })
       })

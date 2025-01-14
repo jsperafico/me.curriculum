@@ -14,4 +14,26 @@ describe('Curriculum page', () => {
     })
   })
 
+  context('Responsive design', () => {
+    context('Mobile Portrait', () => {
+      beforeEach(() => {
+        cy.viewport('iphone-6', 'portrait')
+        cy.mount(<CurriculumPage />)
+      })
+
+      it('Should explain ', () => {
+
+      })
+    })
+    context('Mobile Landscape', () => {
+      beforeEach(() => {
+        cy.viewport('iphone-6', 'landscape')
+        cy.mount(<CurriculumPage />)
+      })
+
+      it('Should explain ', () => {
+
+      })
+    })
+  })
 })

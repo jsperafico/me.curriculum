@@ -8,6 +8,9 @@ export default {
 	content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
 	theme: {
 		extend: {
+			width: {
+				'initial': 'initial',
+			},
 			containers: {
 				'2xs': '14rem',
 				'3xs': '10rem',
