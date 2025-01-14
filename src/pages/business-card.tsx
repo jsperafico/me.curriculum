@@ -32,7 +32,7 @@ const BusinessCardPage = React.forwardRef<
 
     <Card data-id="back" className="w-[90mm] h-[50mm] sm:w-[135mm] sm:h-[75mm] md:w-[180mm] md:h-[100mm] backface-hidden transform transition duration-[1.5s] -rotate-y-180 group-hover:rotate-y-0 absolute insert-center grid grid-flow-col grid-cols-3 rounded-xl border-2 bg-cyan-100 text-cyan-800 shadow-cyan-700 border-cyan-100 shadow-lg">
       <CardHeader data-id="skills" className="m-auto w-full prose prose-sm p-0 md:p-6 col-span-3">
-        <Skills className="text-cyan-800 pr-5" />
+        <Skills className="text-cyan-800 p-0" />
       </CardHeader>
       <CardContent data-id="contacts" className="max-w-[288px] justify-self-end m-2 px-10 py-0 rounded-xl bg-cyan-800 text-cyan-100 shadow-cyan-800 shadow-md content-center col-span-2 sm:px-5">
         <Social />
