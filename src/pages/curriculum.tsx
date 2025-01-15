@@ -21,16 +21,16 @@ import { Social } from "@/components/social"
 
 function renderPhoto() {
   return <section className="group text-cyan-100 italic font-bold text-center h-full border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 bg-cyan-800 from-cyan-500 to-blue-500 shadow-cyan-800 hover:transition-all md:relative md:overflow-hidden md:flex-[3]">
-    <img src={me} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0" />
+    <img src={me} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 hidden md:block" />
     <div className="flex flex-col items-start justify-start md:absolute md:inset-0">
-      <h1 className="w-full my-2 bg-cyan-800 text-2xl">Jonathan Pinto Sperafico</h1>
-      <h2 className="w-full my-2 bg-cyan-800 text-lg">Sr. Test Automation Engineer</h2>
+      <h1 className="w-full my-2 bg-cyan-800 text-xl md:text-2xl">Jonathan Pinto Sperafico</h1>
+      <h2 className="w-full my-2 bg-cyan-800 text-lg md:text-lg">Sr. Test Automation Engineer</h2>
     </div>
   </section>
 }
 
 function renderAbout() {
-  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[4] md:hover:flex-[9]">
+  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100 md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[4] md:hover:flex-[9]">
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">About Me</h3>
 
     <div className="flex-grow m-4 md:@container">
@@ -40,10 +40,10 @@ function renderAbout() {
         <Flag country="Brazil" className="justify-self-start" />
       </div>
       <Separator className="my-3 border-y border-cyan-800 md:border-cyan-100 md:group-hover:border-cyan-800" orientation="horizontal"></Separator>
-      <p className="w-auto max-w-max text-justify text-cyan-800 text-sm md:text-cyan-100 md:group-hover:text-cyan-800 md:hidden md:@sm:block">
+      <p className="w-auto max-w-max text-justify text-cyan-800 md:text-sm md:text-cyan-100 md:group-hover:text-cyan-800 md:hidden md:@sm:block">
         I am an experienced engineer with a strong proficiency in software development and test automation. My career has been marked by a consistent ability to excel in interdisciplinary teamwork, delivering robust and innovative solutions. Among the numerous proofs of concept I have developed, my most notable and recent project is a distributed performance infrastructure. This infrastructure integrates seamlessly with JMeter, Locust, and Gatling, providing results through Grafana and saving statistics in InfluxDB. Additionally, I have extensive experience with Selenium and Rest Assured, and substantial knowledge in using Wiremock, GitLab, Docker, and Kubernetes. My skill set enables me to contribute effectively to complex projects, ensuring high-quality outcomes and continuous improvement in development processes.
       </p>
-      <p className="w-auto max-w-max text-justify text-cyan-100 text-sm hidden md:block md:@sm:hidden">
+      <p className="w-auto max-w-max text-justify text-cyan-100 md:text-sm hidden md:block md:@sm:hidden">
         I am an experienced engineer with a strong proficiency in software development and test automation. My career has been marked by a consistent ability to excel in interdisciplinary teamwork, delivering robust and innovative solutions. [...]
       </p>
     </div>
@@ -51,14 +51,14 @@ function renderAbout() {
 }
 
 function renderSkills() {
-  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[2] md:hover:flex-[3]">
+  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100 md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[2] md:hover:flex-[3]">
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">Notable Skills</h3>
 
     <div className="flex-grow m-4 md:@container">
       <div className="md:hidden md:@2xs:block">
         <Skills className="text-cyan-800 md:text-cyan-100" />
       </div>
-      <p className="w-full text-center text-cyan-100 text-sm my-4 hidden md:block md:@2xs:hidden">
+      <p className="w-full text-center text-cyan-100 md:text-sm my-4 hidden md:block md:@2xs:hidden">
         [...]
       </p>
     </div>
@@ -66,7 +66,7 @@ function renderSkills() {
 }
 
 function renderWorkExperience() {
-  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[1] md:hover:flex-[9]">
+  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100 md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[1] md:hover:flex-[9]">
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">Work Experience</h3>
 
     <ScrollArea className="flex-grow m-4 md:@container">
@@ -79,7 +79,7 @@ function renderWorkExperience() {
               <h5>Sr. Software Test Automation Engineer</h5>
               <h6>Dec'21 - May'24</h6>
             </AccordionTrigger>
-            <AccordionContent className="w-auto max-w-max text-justify text-sm">
+            <AccordionContent className="w-auto max-w-max text-justify md:text-sm">
               Since joining, I have proposed multiple proof of concepts (POCs). One notable
               project, saving over €10,000 annually, is a distributed performance infrastructure
               that is technology-flexible, rendering test results in Grafana, saving test
@@ -100,7 +100,7 @@ function renderWorkExperience() {
               <h5>Sr. Software Test Automation Engineer</h5>
               <h6>Mar'20 - Dec'21</h6>
             </AccordionTrigger>
-            <AccordionContent className="w-auto max-w-max text-justify text-sm">
+            <AccordionContent className="w-auto max-w-max text-justify md:text-sm">
               My primary focus was utilizing Selenium and Rest Assured to identify improvement
               opportunities and accelerate the delivery cycle of test automation features for clients.
               During my time at the company, I have been actively involved in various agile projects
@@ -117,7 +117,7 @@ function renderWorkExperience() {
               <h5>Test Automation Engineer</h5>
               <h6>Jan'15 - Feb'20</h6>
             </AccordionTrigger>
-            <AccordionContent className="w-auto max-w-max text-justify text-sm">
+            <AccordionContent className="w-auto max-w-max text-justify md:text-sm">
               As a QA Automation Engineer, I tackled diverse challenges, initially by writing and
               executing Test Cases with Gherkin on TestLink and Microsoft Test Manager. Not long
               after I enhanced colleagues' functional test code, conducted Performance Testing
@@ -209,7 +209,7 @@ function renderWorkExperience() {
 }
 
 function renderEducation() {
-  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[1] md:hover:flex-[9]">
+  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100 md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[1] md:hover:flex-[9]">
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">Education</h3>
 
     <div className="flex-grow m-4 md:@container">
@@ -252,12 +252,12 @@ function renderEducation() {
 }
 
 function renderContact() {
-  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[1] md:hover:flex-[3]">
+  return <section className="group text-center flex border border-cyan-900 rounded-r-md shadow-md ease-in-out delay-150 duration-500 shadow-cyan-800 flex-col bg-cyan-100 md:hover:transition-all md:hover:bg-cyan-100 md:bg-cyan-800 md:w-min md:flex-col-reverse md:h-full md:flex-[1] md:hover:flex-[3]">
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">Contact</h3>
 
     <div className="flex-grow w-fit self-center m-4 sm:w-initial sm:self-stretch md:@container">
       <div className="md:hidden md:@2xs:block">
-        <Social className="p-1 text-cyan-800 text-sm hover:text-cyan-100 hover:bg-cyan-800 transition-colors" />
+        <Social className="p-1 text-cyan-800 text-xl md:text-sm hover:text-cyan-100 hover:bg-cyan-800 transition-colors" />
       </div>
       <p className="hidden md:block md:@2xs:hidden w-full text-center text-cyan-100 my-4">
         [...]
@@ -275,7 +275,7 @@ const CurriculumPage = React.forwardRef<
     className={cn("max-w-full max-h-fit m-auto md:inset-0 md:fixed", className)}
     {...props}>
 
-    <div className="flex flex-col mt-10 place-self-center md:place-self-auto md:mx-9 md:place-content-center md:flex-row md:h-[70vh] md:mt-0">
+    <div className="flex flex-col mt-10  md:place-self-auto md:mx-9 md:place-content-center md:flex-row md:h-[70vh] md:mt-0">
       {renderPhoto()}
       {renderAbout()}
       {renderSkills()}
