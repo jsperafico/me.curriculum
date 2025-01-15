@@ -28,7 +28,7 @@ describe('Curriculum page', () => {
     })
 
     it(`Sections should be aside each other and same height`, () => {
-      let previousLeftPosition = 0
+      let previousLeftPosition = -1
       let previousHeight = -1
 
       CurriculumData.sections.forEach((section) => {
@@ -68,8 +68,10 @@ describe('Curriculum page', () => {
       })
 
       it(`Sections should be bellow each other and same width`, () => {
-        let previousTopPosition = 0
+        let previousTopPosition = -1
         let previousWidth = -1
+
+        cy.get(`article section:nth-child(1)`).scrollIntoView()
 
         CurriculumData.sections.forEach((section) => {
           cy.get(`article section:nth-child(${section.index})`).then(($section) => {
@@ -107,8 +109,10 @@ describe('Curriculum page', () => {
       })
 
       it(`Sections should be bellow each other and same width`, () => {
-        let previousTopPosition = 0
+        let previousTopPosition = -1
         let previousWidth = -1
+
+        cy.get(`article section:nth-child(1)`).scrollIntoView()
 
         CurriculumData.sections.forEach((section) => {
           cy.get(`article section:nth-child(${section.index})`).then(($section) => {
