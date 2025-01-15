@@ -275,7 +275,7 @@ const CurriculumPage = React.forwardRef<
     className={cn("max-w-full max-h-fit m-auto md:inset-0 md:fixed", className)}
     {...props}>
 
-    <div className="flex flex-col mt-10 md:place-self-auto md:mx-9 md:place-content-center md:flex-row md:h-[70vh] md:mt-0">
+    <div className="flex flex-col mt-14 w-[100vw] md:place-self-auto md:mx-9 md:place-content-center md:flex-row md:h-[70vh] md:mt-0">
       {renderPhoto()}
       {renderAbout()}
       {renderSkills()}

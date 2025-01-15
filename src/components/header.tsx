@@ -16,7 +16,7 @@ const Header = React.forwardRef<
 >(({ className }, ref) => (
   <NavigationMenu
     ref={ref}
-    className={cn("float-start sticky top-0 w-screen h-12 bg-cyan-800 shadow-cyan-900 shadow-lg print:hidden", className)}
+    className={cn("sticky top-0 left-0 right-0 z-10 w-full float-start h-12 bg-cyan-800 shadow-cyan-900 shadow-lg print:hidden", className)}
   >
     <NavigationMenuList className='gap-3'>
       <NavigationMenuItem className="block text-center select-none rounded-md leading-none no-underline outline-none transition-colors border p-2 text-cyan-100 shadow-cyan-200 shadow-sm hover:bg-cyan-100 hover:text-cyan-800 focus:bg-cyan-100 focus:text-cyan-800">
