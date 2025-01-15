@@ -1,4 +1,3 @@
-import typography from '@tailwindcss/typography'
 import transform3d from '@xpd/tailwind-3dtransforms'
 import container_query from '@tailwindcss/container-queries'
 
@@ -8,12 +7,18 @@ export default {
 	content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
 	theme: {
 		extend: {
+			width: {
+				'initial': 'initial',
+			},
 			containers: {
 				'2xs': '14rem',
 				'3xs': '10rem',
 			},
+			screens: {
+				'xs': '340px',
+			},
 		},
 	},
-	plugins: [typography, transform3d, container_query],
+	plugins: [transform3d, container_query],
 }
 

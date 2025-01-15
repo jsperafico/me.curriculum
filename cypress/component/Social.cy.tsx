@@ -2,15 +2,39 @@
 
 import { Social } from "@/components/social"
 
+import SocialData from "../fixtures/social.json"
+
+
 describe('Contacts', () => {
-  beforeEach(() => {
-    cy.mount(<Social />)
+  context('General behaviour', () => {
+    beforeEach(() => {
+      cy.viewport('macbook-13')
+      cy.mount(<Social />)
+    })
+
+    SocialData.forEach((data) => {
+      it(`"${data.type}" should be a way to reach me out`, () => {
+        cy.get(`.list-none > :nth-child(${data.index}) > a`).should('have.attr', 'href', data.href).should('be.visible')
+
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div`).should('have.class', `before:social-${data.type}`).should('be.visible')
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div > span`).should('contain.text', data.text).should('be.visible')
+      })
+    })
   })
 
-  it('How can you reach me out?', () => {
-    cy.get('.list-none > :nth-child(1)').should('contain.text', 'https://www.jsperafico.me').should('have.class', 'before:social-website')
-    cy.get('.list-none > :nth-child(2)').should('contain.text', 'jonathanpintosperafico').should('have.class', 'before:social-linkedin')
-    cy.get('.list-none > :nth-child(3)').should('contain.text', 'jsperafico').should('have.class', 'before:social-github')
-    cy.get('.list-none > :nth-child(4)').should('contain.text', 'hire@jsperafico.me').should('have.class', 'before:social-mail')
+  context('Responsive design', () => {
+    beforeEach(() => {
+      cy.viewport('iphone-6')
+      cy.mount(<Social />)
+    })
+
+    SocialData.forEach((data) => {
+      it(`Label for "${data.type}" shouldn't be visible`, () => {
+        cy.get(`.list-none > :nth-child(${data.index}) > a`).should('have.attr', 'href', data.href).should('be.visible')
+
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div`).should('have.class', `before:social-${data.type}`).should('be.visible')
+        cy.get(`.list-none > :nth-child(${data.index}) > a > div > span`).should('contain.text', data.text).should('not.be.visible')
+      })
+    })
   })
 })

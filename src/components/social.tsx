@@ -2,29 +2,45 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 
-function render(className: string | undefined, props: {}) {
+function render(className: string | undefined, props: {}, ref: React.ForwardedRef<HTMLUListElement>) {
 
-  return <ul className="m-auto list-none text-left">
-    <li className={cn("my-3 px-3 cursor-pointer transition-colors hover:text-cyan-800 hover:bg-cyan-100 before:font-family-awesome before:social-website", className)} {...props}>
-      <a className="pl-2" href="https://www.jsperafico.me" target="_blank">https://www.jsperafico.me</a>
+  return <ul ref={ref} className="list-none text-left p-0 m-0">
+    <li className={cn("my-3 px-3 cursor-pointer", className)} {...props}>
+      <a className="w-full" href="https://www.jsperafico.me" target="_blank">
+        <div className="flex flex-row before:font-family-awesome before:social-website">
+          <span className="portrait:hidden before:mr-5">https://www.jsperafico.me</span>
+        </div>
+      </a>
     </li>
-    <li className={cn("my-3 px-3 cursor-pointer transition-colors hover:text-cyan-800 hover:bg-cyan-100 before:font-family-awesome before:social-linkedin", className)} {...props}>
-      <a className="pl-2" href="https://www.linkedin.com/in/jonathanpintosperafico/" target="_blank">jonathanpintosperafico</a>
+    <li className={cn("my-3 px-3 cursor-pointer", className)} {...props}>
+      <a className="w-full" href="https://www.linkedin.com/in/jonathanpintosperafico/" target="_blank">
+        <div className="flex flex-row before:font-family-awesome before:social-linkedin">
+          <span className="portrait:hidden before:mr-5">jonathanpintosperafico</span>
+        </div>
+      </a>
     </li>
-    <li className={cn("my-3 px-3 cursor-pointer transition-colors hover:text-cyan-800 hover:bg-cyan-100 before:font-family-awesome before:social-github", className)} {...props}>
-      <a className="pl-2" href="https://github.com/jsperafico" target="_blank">jsperafico</a>
+    <li className={cn("my-3 px-3 cursor-pointer", className)} {...props}>
+      <a className="w-full" href="https://github.com/jsperafico" target="_blank">
+        <div className="flex flex-row before:font-family-awesome before:social-github">
+          <span className="portrait:hidden before:mr-5">jsperafico</span>
+        </div>
+      </a>
     </li>
-    <li className={cn("my-3 px-3 cursor-pointer transition-colors hover:text-cyan-800 hover:bg-cyan-100 before:font-family-awesome before:social-mail", className)} {...props}>
-      <a className="pl-2" href="mailto:hire@jsperafico.me">hire@jsperafico.me</a>
+    <li className={cn("my-3 px-3 cursor-pointer", className)} {...props}>
+      <a className="w-full" href="mailto:hire@jsperafico.me">
+        <div className="flex flex-row before:font-family-awesome before:social-mail">
+          <span className="portrait:hidden before:mr-5">hire@jsperafico.me</span>
+        </div>
+      </a>
     </li>
   </ul>
 }
 
 const Social = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }) => (
-  render(className, props)
+  HTMLUListElement,
+  React.HTMLAttributes<HTMLUListElement>
+>(({ className, ...props }, ref) => (
+  render(className, props, ref)
 ))
 
 Social.displayName = "Social"
