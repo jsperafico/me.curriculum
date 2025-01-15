@@ -4,7 +4,7 @@ import { Skills } from "@/components/skills"
 
 import SkillsData from "../fixtures/skills.json"
 
-const THRESHOLD: number = 100;
+const THRESHOLD: number = 100
 
 describe('Skills', () => {
   context('General behavior', () => {
@@ -18,13 +18,13 @@ describe('Skills', () => {
         cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
 
         cy.get(`.list-none > :nth-child(${data.index})`).then(($li) => {
-          const rectLi = $li[0].getBoundingClientRect();
+          const rectLi = $li[0].getBoundingClientRect()
 
           cy.get(`.list-none > :nth-child(${data.index}) > span`).then(($span) => {
-            const rectSpan = $span[0].getBoundingClientRect();
+            const rectSpan = $span[0].getBoundingClientRect()
 
-            expect(rectLi.height).to.be.lessThan(rectSpan.height * 2);
-            expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD);
+            expect(rectLi.height).to.be.lessThan(rectSpan.height * 2)
+            expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD)
           })
         })
       })
@@ -98,13 +98,13 @@ describe('Skills', () => {
         cy.get(`.list-none > :nth-child(${data.index})`).should('contain.text', data.label).should('have.class', `after:skill-${data.experience}`)
 
         cy.get(`.list-none > :nth-child(${data.index})`).then(($li) => {
-          const rectLi = $li[0].getBoundingClientRect();
+          const rectLi = $li[0].getBoundingClientRect()
 
           cy.get(`.list-none > :nth-child(${data.index}) > span`).then(($span) => {
-            const rectSpan = $span[0].getBoundingClientRect();
+            const rectSpan = $span[0].getBoundingClientRect()
 
-            expect(rectLi.height).to.be.equal(rectSpan.height);
-            expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD);
+            expect(rectLi.height).to.be.equal(rectSpan.height)
+            expect(rectLi.right - rectSpan.right).to.be.lessThan(THRESHOLD)
           })
         })
       })
