@@ -16,7 +16,7 @@ const BusinessCardPage = React.forwardRef<
 
   <article
     ref={ref}
-    className={cn("max-w-[90mm] max-h-[50mm] sm:max-w-[135mm] sm:max-h-[75mm] md:max-w-[180mm] md:max-h-[100mm] perspective-1000 group fixed m-auto inset-0", className)}
+    className={cn("max-w-[90mm] max-h-[50mm] sm:max-w-[135mm] sm:max-h-[75mm] md:max-w-[180mm] md:max-h-[100mm] perspective-1000 group fixed m-auto xs:mt-auto sm:mt-16 md:mt-auto inset-0", className)}
     {...props}>
     <Card data-id="front" className="w-[90mm] h-[50mm] sm:w-[135mm] sm:h-[75mm] md:w-[180mm] md:h-[100mm] backface-hidden transform transition duration-[1.5s] group-hover:rotate-y-180 absolute grid grid-flow-col grid-cols-5 rounded-xl border-2 bg-cyan-100 text-cyan-800 shadow-cyan-700 border-cyan-100 shadow-lg">
       <CardHeader className="max-w-[288px] m-2 p-0 rounded-xl bg-cyan-800 text-cyan-100 shadow-cyan-800 shadow-md col-span-2">
