@@ -16,9 +16,9 @@ const BusinessCardPage = React.forwardRef<
 
   <article
     ref={ref}
-    className={cn("max-w-[90mm] max-h-[50mm] md:max-w-[180mm] md:max-h-[100mm] perspective-1000 group fixed m-auto xs:mt-auto md:mt-auto inset-0", className)}
+    className={cn("portrait:max-w-[90mm] sm:max-w-[120mm] max-h-[50mm] md:max-w-[180mm] md:max-h-[100mm] perspective-1000 group fixed m-auto xs:mt-auto md:mt-auto inset-0", className)}
     {...props}>
-    <Card data-id="front" className="w-[90mm] h-[50mm] md:w-[180mm] md:h-[100mm] backface-hidden transform transition duration-[1.5s] group-hover:rotate-y-180 absolute grid grid-flow-col grid-cols-5 rounded-xl border-2 bg-cyan-100 text-cyan-800 shadow-cyan-700 border-cyan-100 shadow-lg">
+    <Card data-id="front" className="portrait:w-[90mm] sm:w-[120mm] h-[50mm] md:w-[180mm] md:h-[100mm] backface-hidden transform transition duration-[1.5s] group-hover:rotate-y-180 absolute grid grid-flow-col grid-cols-5 rounded-xl border-2 bg-cyan-100 text-cyan-800 shadow-cyan-700 border-cyan-100 shadow-lg">
       <CardHeader className="max-w-[288px] m-2 p-0 rounded-xl bg-cyan-800 text-cyan-100 shadow-cyan-800 shadow-md col-span-2">
         <Avatar className="hex m-auto size-24 md:size-52 rounded-none">
           <AvatarImage src={picMe} />
@@ -30,11 +30,11 @@ const BusinessCardPage = React.forwardRef<
       </CardContent>
     </Card>
 
-    <Card data-id="back" className="w-[90mm] h-[50mm] md:w-[180mm] md:h-[100mm] backface-hidden transform transition duration-[1.5s] -rotate-y-180 group-hover:rotate-y-0 absolute insert-center grid grid-flow-col grid-cols-3 rounded-xl border-2 bg-cyan-100 text-cyan-800 shadow-cyan-700 border-cyan-100 shadow-lg">
+    <Card data-id="back" className="portrait:w-[90mm] sm:w-[120mm] h-[50mm] md:w-[180mm] md:h-[100mm] backface-hidden transform transition duration-[1.5s] -rotate-y-180 group-hover:rotate-y-0 absolute insert-center grid grid-flow-col grid-cols-3 rounded-xl border-2 bg-cyan-100 text-cyan-800 shadow-cyan-700 border-cyan-100 shadow-lg">
       <CardHeader data-id="skills" className="m-auto w-full p-0 md:p-6 col-span-3">
         <Skills className="text-cyan-800 p-0 text-sm md:text-lg" />
       </CardHeader>
-      <CardContent data-id="contacts" className="max-w-[288px] justify-self-end m-2 px-10 py-0 rounded-xl bg-cyan-800 text-cyan-100 shadow-cyan-800 shadow-md content-center col-span-2 md:px-2">
+      <CardContent data-id="contacts" className="max-w-[288px] justify-self-end m-2 p-0 rounded-xl bg-cyan-800 text-cyan-100 shadow-cyan-800 shadow-md content-center col-span-2 portrait:px-4 md:px-2">
         <Social className="text-sm md:text-base" />
       </CardContent>
     </Card>
