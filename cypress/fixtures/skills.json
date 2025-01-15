@@ -90,7 +90,7 @@
       "experience": "3",
       "responsive": {
         "portrait": "hidden",
-        "landscape": "visible"
+        "landscape": "hidden"
       }
     }
   ],

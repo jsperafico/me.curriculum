@@ -37,7 +37,7 @@ function render(className: string | undefined, props: {}, ref: React.ForwardedRe
     <li className={cn("mb-0 justify-end transition-colors group-hover:text-cyan-800 group-hover:hover:text-cyan-100 hover:bg-cyan-800 after:font-family-awesome after:skill-4 flex-row hidden sm:flex", className)} {...props}>
       <span className="px-2">Gitlab</span>
     </li>
-    <li className={cn("mb-0 justify-end transition-colors group-hover:text-cyan-800 group-hover:hover:text-cyan-100 hover:bg-cyan-800 after:font-family-awesome after:skill-3 flex-row hidden sm:flex", className)} {...props}>
+    <li className={cn("mb-0 justify-end transition-colors group-hover:text-cyan-800 group-hover:hover:text-cyan-100 hover:bg-cyan-800 after:font-family-awesome after:skill-3 flex-row hidden md:flex", className)} {...props}>
       <span className="px-2">Kubernetes</span>
     </li>
   </ul>
