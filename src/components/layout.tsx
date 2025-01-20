@@ -8,8 +8,8 @@ const Layout = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(() => (
-  <div className="h-svh">
-    <Header />
+  <div className="h-svh print:color-adjust">
+    <Header className="print:hidden" />
     <Outlet />
   </div>
 ))

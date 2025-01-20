@@ -46,4 +46,8 @@
   .head-work {
     grid-template-columns: 1fr 2fr 3fr 2fr;
   }
+  .color-adjust {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }

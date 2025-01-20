@@ -17,6 +17,7 @@
     },
     "types": [
       "cypress"
-    ]
+    ],
+    "module": "ES2015"
   }
 }
