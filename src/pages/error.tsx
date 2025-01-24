@@ -1,17 +1,13 @@
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import {
-  useNavigate,
-  isRouteErrorResponse,
-  useRouteError,
-} from 'react-router-dom';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import { useNavigate, isRouteErrorResponse, useRouteError } from 'react-router-dom'
 
 export const ErrorPage = () => {
-  const navigate = useNavigate();
-  const error = useRouteError() as Error;
+  const navigate = useNavigate()
+  const error = useRouteError() as Error
 
   if (!isRouteErrorResponse(error)) {
-    return null;
+    return null
   }
 
   return (
@@ -29,5 +25,5 @@ export const ErrorPage = () => {
         <button onClick={() => navigate(-1)} className='p-1 rounded-sm border transition-colors duration-[0.5s] hover:bg-cyan-100 hover:text-cyan-800 '>&larr; Go back</button>
       </CardFooter>
     </Card>
-  );
+  )
 }

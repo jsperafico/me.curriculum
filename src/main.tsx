@@ -7,19 +7,21 @@ import { BusinessCardPage } from './pages/business-card.tsx'
 import { Layout } from './components/layout.tsx'
 import { ErrorPage } from './pages/error.tsx'
 import { CurriculumPage } from './pages/curriculum.tsx'
-/* 
-import { ArticlesPage } from './pages/articles.tsx'
-import { ArticleIdPage } from './pages/article-id.tsx'
- */
+import { ArticlesPage } from './pages/articles/articles.tsx'
+import { ArticleIdPage } from './pages/articles/article-id.tsx'
+import { ArticleNewPage } from './pages/articles/article-new.tsx'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />} errorElement={<ErrorPage />}>
       <Route path='/' element={<BusinessCardPage />} />
       <Route path='curriculum' element={<CurriculumPage />} />
-      {/* 
-      <Route path='articles' element={<ArticlesPage />} />
-      <Route path='articles/:id' element={<ArticleIdPage />} />
-     */}
+
+      <Route path='articles'>
+        <Route path='/articles' element={<ArticlesPage />} />
+        <Route path='/articles/new/randomSecretValue' element={<ArticleNewPage />} />
+        <Route path='/articles/:id' element={<ArticleIdPage />} />
+      </Route>
     </Route>
   ),
   {
