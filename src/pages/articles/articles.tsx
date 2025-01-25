@@ -22,66 +22,6 @@ const articles = [
     title: 'This is my super article',
     summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
   },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j2',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j3',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j4',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j5',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j6',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j7',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j8',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j9',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j10',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r011',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j12',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
-  {
-    id: '17823yeoqwiuhihe708daw08r0j13',
-    title: 'This is my super article',
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-  },
 ]
 
 const formSchema = z.object({
@@ -95,7 +35,7 @@ export const ArticlesPage = () => {
   const articlesList = articles.map(article => {
     return (
       <a href={'/articles/' + article.id}>
-        <Card className="max-h-56 p-4 bg-cyan-800 text-cyan-100 shadow-cyan-700 border-cyan-100 shadow-lg">
+        <Card className="max-h-56 p-4 bg-cyan-800 text-cyan-100 shadow-cyan-700 border-cyan-100 shadow-lg transition-colors delay-150 duration-500 hover:bg-cyan-100 hover:text-cyan-800 hover:border-cyan-800">
           <CardHeader className="my-2 mx-6 p-0">{article.title}</CardHeader>
           <CardContent className="line-clamp-1  text-ellipsis">{article.summary}</CardContent>
         </Card>
@@ -126,18 +66,18 @@ export const ArticlesPage = () => {
                 <FormItem className="space-y-0 w-full">
                   <FormLabel className="hidden">Filter the list by relevante content</FormLabel>
                   <FormControl>
-                    <Input placeholder="What interests you?" {...field} className="bg-cyan-800 text-cyan-100" />
+                    <Input placeholder="What interests you?" {...field} className="bg-cyan-800 text-cyan-100 placeholder-cyan-100" />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-cyan-800 px-3" />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="bg-cyan-800 text-cyan-100">Submit</Button>
+            <Button type="submit" className="bg-cyan-800 text-cyan-100 transition-colors delay-150 duration-500 hover:bg-cyan-100 hover:text-cyan-800">Submit</Button>
           </form>
         </Form>
       </section>
       <Separator className="m-auto w-[80%] border-y border-cyan-800" orientation="horizontal"></Separator>
-      <section className="h-full w-full grid grid-cols-1 gap-4 md:grid-cols-2 p-4">
+      <section className={"h-full w-full grid grid-cols-1 gap-4 p-4 ".concat((articles.length > 1) ? "md:grid-cols-2" : "")}>
         {articlesList}
       </section>
     </article>
