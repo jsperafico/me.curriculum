@@ -17,7 +17,7 @@ import SimpleImage from '@editorjs/simple-image'
 // @ts-ignore
 import LinkTool from '@editorjs/link'
 
-export const ArticleNewPage = () => {
+export const ArticleEditorPage = () => {
   const editor = new EditorJS({
     readOnly: false,
     holder: 'editor',

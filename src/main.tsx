@@ -9,7 +9,7 @@ import { ErrorPage } from './pages/error.tsx'
 import { CurriculumPage } from './pages/curriculum.tsx'
 import { ArticlesPage } from './pages/articles/articles.tsx'
 import { ArticleIdPage } from './pages/articles/article-id.tsx'
-import { ArticleNewPage } from './pages/articles/article-new.tsx'
+import { ArticleEditorPage } from './pages/articles/article-editor.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
 
       <Route path='articles'>
         <Route path='/articles' element={<ArticlesPage />} />
-        <Route path='/articles/new/randomSecretValue' element={<ArticleNewPage />} />
+        <Route path='/articles/new/randomSecretValue' element={<ArticleEditorPage />} />
         <Route path='/articles/:id' element={<ArticleIdPage />} />
       </Route>
     </Route>
