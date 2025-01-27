@@ -47,6 +47,8 @@ jobs:
           app_location: "/"
           api_location: ""
           output_location: "/dist"
+        env:
+          VITE_SECRET_ARTICLE_EDITOR: ${{ secrets.VITE_SECRET_ARTICLE_EDITOR }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

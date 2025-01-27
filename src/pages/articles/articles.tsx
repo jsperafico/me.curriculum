@@ -24,13 +24,9 @@ const articles = [
   },
 ]
 
-const formSchema = z.object({
-  filter: z.string().min(3, {
-    message: "Filter input must have at least 3 characters.",
-  }),
-})
-
 export const ArticlesPage = () => {
+
+  console.log(encodeURI(import.meta.env.VITE_SECRET_ARTICLE_EDITOR))
 
   const articlesList = articles.map(article => {
     return (
@@ -41,6 +37,12 @@ export const ArticlesPage = () => {
         </Card>
       </a>
     )
+  })
+
+  const formSchema = z.object({
+    filter: z.string().min(3, {
+      message: "Filter input must have at least 3 characters.",
+    }),
   })
 
   const form = useForm<z.infer<typeof formSchema>>({
