@@ -17,7 +17,7 @@ import Code from '@coolbytes/editorjs-code'
 import Embed from '@editorjs/embed'
 // @ts-ignore
 import LinkTool from '@editorjs/link'
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 
 /**
  * Opens the user's system file dialog prompting to download
