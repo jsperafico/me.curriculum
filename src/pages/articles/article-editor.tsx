@@ -63,16 +63,21 @@ export const ArticleEditorPage = () => {
         class: ImageTool,
         config: {
           uploader: {
-            uploadByFile(file) {
-              // should return a fucking promise
+            uploadByFile: async (file: File) => {
+              console.log(file)
+              console.log(`/${encodeURI(file.name)}`)
+
               return {
                 success: 1,
                 file: {
-                  url: `/${file.name}.jpg`,
+                  url: `/${encodeURI(file.name)}`,
                 }
               }
             },
-            uploadByUrl(url: string) {
+            uploadByUrl: async (url: string) => {
+              console.log(url)
+              console.log(`/${url.split('/')[-1]}`)
+
               return {
                 success: 1,
                 file: {
