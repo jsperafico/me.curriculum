@@ -1,4 +1,4 @@
-
+import { useParams } from 'react-router-dom'
 import EditorJS, { ToolConstructable } from '@editorjs/editorjs'
 
 import Header from '@editorjs/header'
@@ -18,49 +18,55 @@ import Embed from '@editorjs/embed'
 import LinkTool from '@editorjs/link'
 
 export const ArticleIdPage = () => {
-  const editor = new EditorJS({
-    readOnly: true,
-    data: {
-      "time": 1550476186479,
-      "blocks": [],
-      "version": "2.8.1"
-    },
-    holder: 'editor',
-    tools: {
-      header: Header,
-      quote: Quote,
-      embed: Embed,
-      image: ImageTool,
-      table: Table,
-      warning: Warning,
-      delimiter: Delimiter,
-      code: {
-        class: Code,
-        config: {
-          languages: [
-            'plaintext', 'bash', 'sql', 'css', 'dockerfile', 'html',
-            'xml', 'json', 'java', 'javascript', 'markdown', 'nginx',
-            'powershell', 'python', 'rust', 'shell', 'terraform',
-            'typescript', 'yaml'
-          ],
+  let { id } = useParams()
 
-        },
-      },
-      inlineCode: {
-        class: InlineCode,
-        shortcut: 'CMD+SHIFT+M',
-      },
-      list: {
-        class: List as unknown as ToolConstructable,
-        inlineToolbar: true,
-        config: {
-          defaultStyle: 'unordered'
-        },
-      },
-      linkTool: {
-        class: LinkTool,
-      },
-    },
+  fetch(`/${id}/article.json`, {
+    method: 'GET',
+  }).then((r) => {
+    if (r.ok) {
+      r.json().then((value) => {
+        const editor = new EditorJS({
+          readOnly: true,
+          data: value,
+          holder: 'editor',
+          tools: {
+            header: Header,
+            quote: Quote,
+            embed: Embed,
+            image: ImageTool,
+            table: Table,
+            warning: Warning,
+            delimiter: Delimiter,
+            code: {
+              class: Code,
+              config: {
+                languages: [
+                  'plaintext', 'bash', 'sql', 'css', 'dockerfile', 'html',
+                  'xml', 'json', 'java', 'javascript', 'markdown', 'nginx',
+                  'powershell', 'python', 'rust', 'shell', 'terraform',
+                  'typescript', 'yaml'
+                ],
+
+              },
+            },
+            inlineCode: {
+              class: InlineCode,
+              shortcut: 'CMD+SHIFT+M',
+            },
+            list: {
+              class: List as unknown as ToolConstructable,
+              inlineToolbar: true,
+              config: {
+                defaultStyle: 'unordered'
+              },
+            },
+            linkTool: {
+              class: LinkTool,
+            },
+          },
+        })
+      })
+    }
   })
 
   return (
