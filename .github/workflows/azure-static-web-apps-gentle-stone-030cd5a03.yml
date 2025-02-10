@@ -18,17 +18,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '23.5.0'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm install
       - uses: cypress-io/github-action@v6
         with:
           config: video=false
           browser: ${{ matrix.browser }}
-          build: npm run test
+          build: npm run build
+          start: npm run test
 
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
