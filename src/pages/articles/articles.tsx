@@ -71,7 +71,7 @@ export const ArticlesPage = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="bg-cyan-800 text-cyan-100 transition-colors delay-150 duration-500 hover:bg-cyan-100 hover:text-cyan-800">Submit</Button>
+            <Button type="submit" className="bg-cyan-800 text-cyan-100 transition-colors delay-150 duration-500 hover:bg-cyan-100 hover:text-cyan-800">Filter</Button>
           </form>
         </Form>
       </section>
