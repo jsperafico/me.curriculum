@@ -22,6 +22,8 @@ jobs:
           node-version: '23.5.0'
           cache: 'npm'
       - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
       - uses: cypress-io/github-action@v6
         with:
           config: video=false
