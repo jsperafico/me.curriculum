@@ -25,7 +25,7 @@ export const ArticleIdPage = () => {
   }).then((r) => {
     if (r.ok) {
       r.json().then((value) => {
-        const editor = new EditorJS({
+        new EditorJS({
           readOnly: true,
           data: value,
           holder: 'editor',

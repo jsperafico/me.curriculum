@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 import EditorJS, { ToolConstructable } from '@editorjs/editorjs'
 
@@ -49,7 +49,7 @@ export function download(
 }
 
 export const ArticleEditorPage = () => {
-  const [content, setContent] = useState("");
+  //const [content, setContent] = useState("");
 
   const editor = new EditorJS({
     readOnly: false,
