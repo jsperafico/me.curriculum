@@ -20,9 +20,9 @@ import ArticlesFile from "@/articles.json"
 
 export const ArticlesPage = () => {
 
-  if (import.meta.env.DEV) {
-    console.log(encodeURI(import.meta.env.VITE_SECRET_ARTICLE_EDITOR))
-  }
+  //if (import.meta.env.DEV) {
+  console.log(encodeURI(import.meta.env.VITE_SECRET_ARTICLE_EDITOR))
+  //}
 
   const articlesList = ArticlesFile.articles.map(article => {
     return (
