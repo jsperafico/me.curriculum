@@ -1,0 +1,11 @@
+{
+  "articles": [
+    {
+      "id": "super-sample",
+      "title": "Hey this might work this time!",
+      "summary": "Oh boy",
+      "published": 1738083161965
+    }
+  ],
+  "length": 1
+}

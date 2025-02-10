@@ -1,45 +1,60 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { BusinessCardPage } from './pages/business-card.tsx'
 import { Layout } from './components/layout.tsx'
 import { ErrorPage } from './pages/error.tsx'
 import { CurriculumPage } from './pages/curriculum.tsx'
-/* 
-import { ArticlesPage } from './pages/articles.tsx'
-import { ArticleIdPage } from './pages/article-id.tsx'
- */
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<Layout />} errorElement={<ErrorPage />}>
-      <Route path='/' element={<BusinessCardPage />} />
-      <Route path='curriculum' element={<CurriculumPage />} />
-      {/* 
-      <Route path='articles' element={<ArticlesPage />} />
-      <Route path='articles/:id' element={<ArticleIdPage />} />
-     */}
-    </Route>
-  ),
+import { ArticlesPage } from './pages/articles/articles.tsx'
+import { ArticleIdPage } from './pages/articles/article-id.tsx'
+import { ArticleEditorPage } from './pages/articles/article-editor.tsx'
+
+const router = createBrowserRouter([
   {
-    future: {
-      v7_relativeSplatPath: true,
-      v7_fetcherPersist: true,
-      v7_normalizeFormMethod: true,
-      v7_partialHydration: true,
-      v7_skipActionErrorRevalidation: true,
-    },
-  }
-)
+    path: '/',
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'business-card',
+        element: <BusinessCardPage />,
+      },
+      {
+        index: true,
+        element: <CurriculumPage />,
+      },
+      {
+        path: 'articles',
+        children: [
+          {
+            index: true,
+            element: <ArticlesPage />
+          },
+          {
+            path: ':id',
+            element: <ArticleIdPage />,
+          },
+          {
+            path: `editor/${encodeURI(import.meta.env.VITE_SECRET_ARTICLE_EDITOR)}`,
+            element: <ArticleEditorPage />,
+          },
+        ]
+      },
+    ],
+  },
+], {
+  future: {
+    v7_relativeSplatPath: true,
+  },
+})
+
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <RouterProvider
-      future={{
-        v7_startTransition: true,
-      }}
-      router={router}
-    />
-  </StrictMode>,
+  <RouterProvider
+    future={{
+      v7_startTransition: true,
+    }}
+    router={router}
+  />
 )
