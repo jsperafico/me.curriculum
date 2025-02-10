@@ -17,11 +17,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        path: 'business-card',
         element: <BusinessCardPage />,
       },
       {
-        path: 'curriculum',
+        index: true,
         element: <CurriculumPage />,
       },
       {
