@@ -13,7 +13,7 @@ jobs:
   run_tests:
     strategy:
       matrix:
-        browser: [firefox, chrome, edge]
+        browser: [chrome, edge] # RealHover down't work on firefox as per https://github.com/dmtrKovalenko/cypress-real-events
 
     runs-on: ubuntu-20.04
     steps:
