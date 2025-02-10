@@ -22,8 +22,7 @@ jobs:
         with:
           config: video=false
           browser: ${{ matrix.browser }}
-          build: npm run build
-          start: npm run test
+          component: true
 
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
