@@ -20,7 +20,7 @@ import '@/index.css'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-import { mount } from 'cypress/react18'
+import { mount } from 'cypress/react'
 import 'cypress-each'
 import "cypress-real-events"
 
