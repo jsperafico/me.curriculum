@@ -55,7 +55,7 @@ function renderSkills() {
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">Notable Skills</h3>
 
     <div className="flex-grow m-4 md:@container">
-      <div className="md:hidden md:@2xs:block">
+      <div className="md:hidden md:@2xs:block print:block">
         <Skills className="text-cyan-800 md:text-cyan-100" />
       </div>
       <p className="w-full text-center text-cyan-100 md:text-sm my-4 hidden md:block md:@2xs:hidden">
