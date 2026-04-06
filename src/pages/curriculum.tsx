@@ -55,7 +55,7 @@ function renderSkills() {
     <h3 className="text-center text-cyan-100 italic font-bold bg-cyan-800 sticky top-10 text-lg md:relative md:top-0 md:mt-3">Notable Skills</h3>
 
     <div className="flex-grow m-4 md:@container">
-      <div className="md:hidden md:@2xs:block print:block">
+      <div className="md:hidden md:@2xs:block">
         <Skills className="text-cyan-800 md:text-cyan-100" />
       </div>
       <p className="w-full text-center text-cyan-100 md:text-sm my-4 hidden md:block md:@2xs:hidden">
@@ -72,6 +72,15 @@ function renderWorkExperience() {
     <ScrollArea className="flex-grow m-4 md:@container">
       <div className="md:hidden md:@sm:block">
         <Accordion type="single" defaultValue="item-1" collapsible>
+          <AccordionItem value="item-1" className="border-cyan-800 border-b-2 text-cyan-800">
+            <AccordionTrigger className="grid grid-flow-col head-work p-0 text-sm font-bold my-2">
+              <Flag country="Brazil" asChild />
+              <a href="https://volpe.solutions/" target="_blank"><h4>Volpe Solutions</h4></a>
+              <h5>Founder</h5>
+              <h6 className="text-right">May'25 - Now</h6>
+            </AccordionTrigger>
+          </AccordionItem>
+
           <AccordionItem value="item-1" className="border-cyan-800 border-b-2 text-cyan-800">
             <AccordionTrigger className="grid grid-flow-col head-work p-0 text-sm font-bold my-2">
               <Flag country="Finland" asChild />
